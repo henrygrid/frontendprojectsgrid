@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from './header.js';
 import League from './league.js';
 import Team from './team.js';
 import Player from './player.js';
@@ -28,7 +29,7 @@ class Dashboard extends React.Component {
             <a href="" className="search__submit"><span>Search</span></a>
           </div>
           <h1 className="content__header">Dashboard</h1>
-          <League />
+          <League stats={this.props.stats} onStatChange={(stats) => this.props.onStatChange(stats)}/>
           <Team />
           <Player />
         </section>

@@ -18,6 +18,13 @@ class LeagueStat extends React.Component {
     });
   }
 
+  editToggleUpdate (rank, name, record) {
+    this.setState({
+      isEditing: !this.state.isEditing
+    });
+    this.props.handleChangeStats( rank, name, record);
+  }
+
   render() {
     let field;
 
@@ -25,15 +32,15 @@ class LeagueStat extends React.Component {
       field = <LeagueStatStatic
         rank={this.props.rank}
         name={this.props.name}
-        value={this.props.value}
-        onClick={() => this.editToggle()}
+        record={this.props.record}
+        onClick={(rank) => this.editToggle() }
       />
     } else {
       field = <LeagueStatEditing
         rank={this.props.rank}
         name={this.props.name}
-        value={this.props.value}
-        onClick={() => this.editToggle()}
+        record={this.props.record}
+        onClick={(rank, name, record) => {this.editToggleUpdate(rank, name, record)} }
       />
     }
 

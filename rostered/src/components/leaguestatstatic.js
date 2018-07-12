@@ -9,7 +9,7 @@ class LeagueStatStatic extends React.Component {
       <div className="panel__field__stats">
         <span className="panel__field__stat panel__field__stat__rank">{this.props.rank}</span>
         <p className="panel__field__stat panel__field__stat__name">{this.props.name}</p>
-        <p className="panel__field__stat panel__field__stat__value">{this.props.value}</p>
+        <p className="panel__field__stat panel__field__stat__value">{this.props.record}</p>
         <div className="panel__field__links">
           <i className="fa fa-edit" aria-hidden="true" onClick={() => this.props.onClick()}></i>
         </div>

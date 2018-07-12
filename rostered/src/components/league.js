@@ -27,7 +27,7 @@ class League extends React.Component {
           </div>
           <div className="panel__body">
             <ul className="panel__list">
-              <LeagueCategory />
+              <LeagueCategory stats={this.props.stats} onStatChange={(stats) => this.props.onStatChange(stats)}/>
               <li className="panel__list__item">
                 <h2 className="panel__list__item__title" onClick={((e) => this.toggleStats(e))}>Top Scorers</h2>
                 <ul className="panel__sublist">

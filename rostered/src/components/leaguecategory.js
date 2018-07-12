@@ -34,6 +34,15 @@ class LeagueCategory extends React.Component {
   //   });
   // }
 
+  handleChangeStats (i, rank, name, record) {
+    var stats = this.props.stats;
+    stats.leagues[0].teams[i].rank = rank;
+    stats.leagues[0].teams[i].name = name;
+    stats.leagues[0].teams[i].record = record;
+    console.log(stats);
+    this.props.onStatChange(stats);
+  }
+
   toggleStats = (e) => {
     var el = e.target;
     $(el).next(".panel__sublist").slideToggle();
@@ -41,23 +50,7 @@ class LeagueCategory extends React.Component {
 
   render() {
 
-    var stats = [
-      {
-        rank: 1,
-        name: 'Wombats',
-        value: '6-1'
-      },
-      {
-        rank: 2,
-        name: 'Cavaliers',
-        value: '5-2'
-      },
-      {
-        rank: 3,
-        name: 'Hornets',
-        value: '4-3'
-      }
-    ];
+    // var teams = this.props.stats.leagues[0].teams;
 
     return (
       <li className="panel__list__item">
@@ -70,12 +63,12 @@ class LeagueCategory extends React.Component {
               <span className="panel__list__item__header--record">Record</span>
             </div>
 
-            {stats.map(stat => <LeagueStat
-              key={stat.rank}
+            {this.props.stats.leagues[0].teams.map((stat, i) => <LeagueStat
               rank={stat.rank}
               name={stat.name}
-              value={stat.value}
-              onClick={() => this.editToggle()}
+              record={stat.record}
+              handleChangeStats={(rank, name, record) => {this.handleChangeStats(i, rank, name, record)} }
+
             />)}
           </li>
         </ul>
