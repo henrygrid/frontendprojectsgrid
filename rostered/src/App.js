@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import Login from './components/login.js';
 import Container from './components/container.js';
+import Dashboard from './components/dashboard/dashboard.js';
+import LeagueDashboard from './components/league/dashboard.js';
+import LeagueProfile from './components/league/profile.js';
+import TeamDashboard from './components/team/dashboard.js';
+import PlayerDashboard from './components/player/dashboard.js';
 import {
   BrowserRouter,
   Route
@@ -50,7 +55,10 @@ class App extends Component {
         <div className="App">
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossOrigin="anonymous" />
           <Route exact path="/" component={Login} />
-          <Route path="/dashboard" render={ () => <Container stats={this.state.stats} onStatChange={(stats) => this.onStatChange(stats)} />} />
+          <Route path="/home" render={ () => <Dashboard stats={this.state.stats} onStatChange={(stats) => this.onStatChange(stats)} />} />
+          <Route path="/leagues" render={ ({match}) => <LeagueDashboard stats={this.state.stats} match={match} onStatChange={(stats) => this.onStatChange(stats)} />} />
+          <Route path="/teams" render={ () => <TeamDashboard stats={this.state.stats} onStatChange={(stats) => this.onStatChange(stats)} />} />
+          <Route path="/players" render={ () => <PlayerDashboard stats={this.state.stats} onStatChange={(stats) => this.onStatChange(stats)} />} />
         </div>
       </BrowserRouter>
     );

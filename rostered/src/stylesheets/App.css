@@ -1,8 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -16,76 +11,79 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+  display: block; }
+
 body {
-	line-height: 1;
-}
+  line-height: 1; }
+
 ol, ul {
-	list-style: none;
-}
+  list-style: none; }
+
 blockquote, q {
-	quotes: none;
-}
+  quotes: none; }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
-}
+  content: '';
+  content: none; }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-a{
-  text-decoration: none;
-}
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
 @font-face {
   font-family: "Fjalla One";
   font-style: normal;
-  font-weight:400;
-  src:url('../assets/fonts/Fjalla_One/FjallaOne-Regular.ttf');
-}
+  font-weight: 400;
+  src: url("../assets/fonts/Fjalla_One/FjallaOne-Regular.ttf"); }
 
 @font-face {
   font-family: "Noto Sans";
   font-style: normal;
-  src:url('../assets/fonts/Noto_Sans/NotoSans-Regular.ttf');
-}
+  src: url("../assets/fonts/Noto_Sans/NotoSans-Regular.ttf"); }
 
 @font-face {
   font-family: "Noto Sans Bold";
   font-style: normal;
-  src:url('../assets/fonts/Noto_Sans/NotoSans-Bold.ttf');
-}
+  src: url("../assets/fonts/Noto_Sans/NotoSans-Bold.ttf"); }
 
 .app {
-  height: 100%;
-}
+  height: 100%; }
 
 /* .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 } */
+/* .App-intro {
+  font-size: large;
+} */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 
 /* Login */
 .login__background {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../assets/images/team.jpg') no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/team.jpg") no-repeat;
   background-size: cover;
   background-position: 0;
-  position: relative;
-}
+  position: relative; }
 
 .login__modal {
   position: absolute;
@@ -95,33 +93,28 @@ a{
   height: 350px;
   background-color: #fff;
   border-radius: 5px;
-  padding: 20px;
-}
+  padding: 20px; }
 
 .login__modal__header {
   font-family: "Fjalla One";
   font-size: 24px;
   text-align: center;
-  margin-bottom: 50px;
-}
+  margin-bottom: 50px; }
 
 .login__modal__login-form {
   font-family: "Noto Sans";
   width: 50%;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
 .login__modal__login-form__label {
   display: block;
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
 
 .login__modal__login-form__input {
   display: block;
   margin-bottom: 20px;
   width: 100%;
-  padding: 5px;
-}
+  padding: 5px; }
 
 .login__modal__login-form__button {
   display: block;
@@ -131,48 +124,52 @@ a{
   border: none;
   border-radius: 5px;
   padding: 5px 10px;
-  margin: 0 auto;
-}
-
+  margin: 0 auto; }
 
 /* Header */
-
 .App-header {
-  background: linear-gradient(rgba(0, 0, 0, .3), transparent), url('../assets/images/ball-banner.jpg') no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), transparent), url("../assets/images/ball-banner.jpg") no-repeat;
   background-position: center;
   height: 30vh;
   padding: 20px;
-  color: white;
-}
+  color: white; }
 
 .App-title {
   font-size: 2rem;
   font-family: "Fjalla One";
-}
+  display: inline-block; }
 
 .content {
-  position:relative;
+  position: relative;
   padding: 50px 0 1px;
   font-family: "Noto Sans";
-  text-align: center;
-}
+  text-align: center; }
 
 .content__header {
-  margin-bottom: 45px;
-}
+  margin-bottom: 45px; }
+
+.App-nav {
+  float: right;
+  position: relative;
+  font-family: "Noto Sans"; }
+  .App-nav__list__item {
+    display: inline-block;
+    margin-right: 25px; }
+    .App-nav__list__item a {
+      color: #fff; }
+    .App-nav__list__item__sublist {
+      display: none; }
 
 /* Search */
-
-.search__wrapper{
+.search__wrapper {
   position: absolute;
   left: calc(50% - 350px);
   top: -20px;
-  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12);
-  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.12);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 5px;
-  width: 700px;
-}
+  width: 700px; }
 
 .search__input {
   width: 300px;
@@ -181,13 +178,11 @@ a{
   border-bottom-left-radius: 5px;
   border: none;
   width: 80%;
-  font-size: 14px;
-}
+  font-size: 14px; }
 
 .search__input:active,
 .search__input:focus {
-  outline: none;
-}
+  outline: none; }
 
 .search__submit {
   background-color: #A3C47F;
@@ -199,30 +194,27 @@ a{
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   padding: 0 5px;
-  width: calc(20% - 30px)
-}
+  width: calc(20% - 30px); }
 
 .search__submit span {
   position: relative;
-  top: 11px;
-}
-
-/* Dashboard */
+  top: 11px; }
 
 .panel {
   width: 30%;
   margin-right: 2%;
   display: inline-block;
-  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12);
-  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.12);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 5px;
-  vertical-align: top;
-}
+  vertical-align: top; }
+
+.panel__full-width {
+  width: 80%; }
 
 .panel:last-child {
-  margin-right: 0;
-}
+  margin-right: 0; }
 
 .panel__header {
   display: inline-block;
@@ -231,118 +223,147 @@ a{
   color: white;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  padding: 15px 0;
-}
+  padding: 15px 0; }
 
 .panel__body {
-  text-align: left;
-}
+  text-align: left; }
 
 .panel__list {
-  list-style: none;
-}
+  list-style: none; }
 
 .panel__list__item {
-  border-bottom: 1px solid rgba(0,0,0,0.12);
-}
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
 
 .panel__list__item:last-child {
-  border-bottom: none;
-}
+  border-bottom: none; }
 
 .panel__list__item__header {
-  border-bottom: 1px solid rgba(0,0,0,0.12);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   background-color: #f5f5f5;
   padding: 5px 15px;
-  width: calc(100% - 30px);
-}
+  width: calc(100% - 30px); }
 
 .panel__list__item__header span {
-  display: inline-block;
-}
+  display: inline-block; }
 
 .panel__list__item__header--rank,
 .panel__field__stat__rank,
 .panel__field__rank {
-  width: 15%;
-}
+  width: 15%; }
 
 .panel__list__item__header--team,
 .panel__field__stat__name,
 .panel__field__name {
-  width: 55%;
-}
+  width: 55%; }
 
 .panel__list__item__header--record,
 .panel__field__stat__value {
   width: 30%;
-  border-right: none;
-}
+  border-right: none; }
 
 .panel__field__value {
-  width: 15%;
-}
+  width: 15%; }
 
 .panel__list__item__title {
   padding: 15px;
-}
+  display: block;
+  color: black; }
 
 .panel__sublist {
   background-color: #f5f5f5;
-  display: none;
-}
+  display: none; }
 
 .panel__field__stats {
-  position:relative;
+  position: relative;
   padding: 15px;
-  border-bottom: 1px solid rgba(0,0,0,0.07);
-}
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07); }
 
 .panel__field__links {
   position: absolute;
   right: 20px;
-  bottom: 15px;
-}
+  bottom: 15px; }
 
 .editing-container {
-  display: inline-block;
-}
+  display: inline-block; }
 
 .panel__field__stats:last-child {
-  border-bottom: none;
-}
+  border-bottom: none; }
 
 .panel__field__stat {
-  display: inline-block;
-}
+  display: inline-block; }
 
 .stat--editing {
   width: 80%;
   background: transparent;
   border: none;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-  transition: border-bottom .35s;
-}
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: border-bottom .35s; }
 
 .stat--editing:active,
 .stat--editing:focus {
   outline: none;
-  border-bottom: 2px solid rgba(0,0,0,0.2);
-}
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2); }
 
 .margin-right-10 {
-  margin-right: 10px;
-}
+  margin-right: 10px; }
 
 .fa {
-  cursor: pointer;
-}
+  cursor: pointer; }
 
-/* .App-intro {
-  font-size: large;
-} */
+.profile__container {
+  padding-bottom: 30px; }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+.profile {
+  margin-bottom: 30px; }
+  .profile__left {
+    width: 40%; }
+    .profile__left__title {
+      font-size: 18px;
+      margin-bottom: 60px; }
+    .profile__left__image img {
+      border-radius: 50%; }
+  .profile__right {
+    width: 60%;
+    vertical-align: top; }
+    .profile__right__list {
+      margin-top: 80px; }
+      .profile__right__list__item {
+        text-align: left;
+        margin-bottom: 20px; }
+        .profile__right__list__item__title {
+          width: 30%; }
+        .profile__right__list__item__data {
+          width: 70%; }
+        .profile__right__list__item__title, .profile__right__list__item__data {
+          display: inline-block; }
+    .profile__right__links {
+      width: 60%;
+      -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+      -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+      border-radius: 5px; }
+      .profile__right__links__header {
+        display: inline-block;
+        width: 100%;
+        background-color: #A3C47F;
+        color: white;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 15px 0; }
+      .profile__right__links__body__link {
+        display: inline-block;
+        width: calc((100%/3) - 1px);
+        padding: 15px 0;
+        border-right: 1px solid rgba(0, 0, 0, 0.12);
+        color: black;
+        transition: background-color .35s; }
+        .profile__right__links__body__link:hover {
+          background-color: rgba(0, 0, 0, 0.12); }
+        .profile__right__links__body__link:first-child {
+          width: 33.33333%;
+          border-bottom-left-radius: 5px; }
+        .profile__right__links__body__link:last-child {
+          border-right: none;
+          border-bottom-right-radius: 5px; }
+  .profile__left, .profile__right {
+    display: inline-block; }

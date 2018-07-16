@@ -19,7 +19,7 @@ class Login extends React.Component {
               <input id="username" className="login__modal__login-form__input" type="text" />
               <label className="login__modal__login-form__label">Password</label>
               <input id="password" className="login__modal__login-form__input" type="text" />
-              <Link to="/dashboard"><input id="submit-button" className="login__modal__login-form__button" type="submit" /></Link>
+              <Link exact to="/home"><input id="submit-button" className="login__modal__login-form__button" type="submit" /></Link>
             </form>
           </div>
         </div>
