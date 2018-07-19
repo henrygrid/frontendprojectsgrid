@@ -11,6 +11,30 @@
   font-size: large;
 } */
 
+.right {
+  float: right;
+}
+
+.hidden {
+  display: none;
+}
+
+.margin-right-20 {
+  margin-right: 20px;
+}
+
+.green {
+  color: #A3C47F;
+}
+
+.red {
+  color: red;
+}
+
+.js-delete-team {
+  display: none;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

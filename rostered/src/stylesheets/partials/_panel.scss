@@ -7,6 +7,26 @@
   box-shadow: 0 1px 3px rgba(0,0,0,0.12);
   border-radius: 5px;
   vertical-align: top;
+
+  &__message-wrapper {
+    padding: 20px;
+    text-align: center;
+  }
+
+  &__message {
+    margin-bottom: 20px;
+  }
+
+  &__actions__link {
+    padding: 5px 15px;
+    background-color: #A3C47F;
+    color: #fff;
+    border-radius: 5px;
+
+    &:first-child {
+      margin-right: 10px;
+    }
+  }
 }
 
 .panel__full-width {
@@ -80,6 +100,24 @@
   padding: 15px;
   display: block;
   color: black;
+
+  &__icon {
+    margin-right: 15px;
+  }
+
+  &__input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    transition: border-bottom .35s;
+    font-size: 16px;
+
+    &:active,
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid rgba(0,0,0,0.2);
+    }
+  }
 }
 
 .panel__sublist {

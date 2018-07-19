@@ -28,8 +28,8 @@ class LeagueDashboard extends React.Component {
             <a href="" className="search__submit"><span>Search</span></a>
           </div>
           <Route exact path={match.path} render={ () => <Redirect to={`${match.path}/dashboard`} />} />
-          <Route exact path={`${match.path}/dashboard`} render={ () => <LeagueDashboardTable stats={this.props.stats} match={this.props.match} />} />
-          <Route exact path={`${match.path}/profile/:id`} render={ ({match}) => <LeagueProfile stats={this.props.stats} match={match} />} />
+          <Route exact path={`${match.path}/dashboard`} render={ () => <LeagueDashboardTable stats={this.props.stats} onStatChange={(stats) => this.props.onStatChange(stats)} match={this.props.match} />} />
+          <Route exact path={`${match.path}/profile/:id`} render={ ({match}) => <LeagueProfile stats={this.props.stats} onStatChange={(stats) => this.props.onStatChange(stats)} match={match} />} />
         </section>
       </div>
     );

@@ -5,6 +5,7 @@ var rosteredData = {
       sport: "soccer",
       icon: "fa fa-futbol",
       name: "EX Flint Adult Soccer",
+      createdDate: "10/17/05",
       teams: [
         {
           id: "",
@@ -202,6 +203,7 @@ var rosteredData = {
       sport: "basketball",
       icon: "fa fa-basketball-ball",
       name: "Rochester Kids Basketball",
+      createdDate: "05/22/13",
       teams: [
         {
           id: "",

@@ -70,6 +70,24 @@ a {
 /* .App-intro {
   font-size: large;
 } */
+.right {
+  float: right; }
+
+.hidden {
+  display: none; }
+
+.margin-right-20 {
+  margin-right: 20px; }
+
+.green {
+  color: #A3C47F; }
+
+.red {
+  color: red; }
+
+.js-delete-team {
+  display: none; }
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg); }
@@ -209,6 +227,18 @@ a {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 5px;
   vertical-align: top; }
+  .panel__message-wrapper {
+    padding: 20px;
+    text-align: center; }
+  .panel__message {
+    margin-bottom: 20px; }
+  .panel__actions__link {
+    padding: 5px 15px;
+    background-color: #A3C47F;
+    color: #fff;
+    border-radius: 5px; }
+    .panel__actions__link:first-child {
+      margin-right: 10px; }
 
 .panel__full-width {
   width: 80%; }
@@ -268,6 +298,17 @@ a {
   padding: 15px;
   display: block;
   color: black; }
+  .panel__list__item__title__icon {
+    margin-right: 15px; }
+  .panel__list__item__title__input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: border-bottom .35s;
+    font-size: 16px; }
+    .panel__list__item__title__input:active, .panel__list__item__title__input:focus {
+      outline: none;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.2); }
 
 .panel__sublist {
   background-color: #f5f5f5;
@@ -334,6 +375,15 @@ a {
           width: 30%; }
         .profile__right__list__item__data {
           width: 70%; }
+          .profile__right__list__item__data__field {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            transition: border-bottom .35s;
+            font-size: 16px; }
+            .profile__right__list__item__data__field:active, .profile__right__list__item__data__field:focus {
+              outline: none;
+              border-bottom: 2px solid rgba(0, 0, 0, 0.2); }
         .profile__right__list__item__title, .profile__right__list__item__data {
           display: inline-block; }
     .profile__right__links {
@@ -367,3 +417,6 @@ a {
           border-bottom-right-radius: 5px; }
   .profile__left, .profile__right {
     display: inline-block; }
+
+.modal {
+  display: none; }
