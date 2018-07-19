@@ -85,9 +85,6 @@ a {
 .red {
   color: red; }
 
-.js-delete-team {
-  display: none; }
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg); }
@@ -253,7 +250,14 @@ a {
   color: white;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  padding: 15px 0; }
+  padding: 15px 0;
+  position: relative; }
+  .panel__header__add {
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: 15px; }
 
 .panel__body {
   text-align: left; }
@@ -387,11 +391,33 @@ a {
         .profile__right__list__item__title, .profile__right__list__item__data {
           display: inline-block; }
     .profile__right__links {
-      width: 60%;
-      -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
-      -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
-      border-radius: 5px; }
+      position: relative;
+      left: 100px;
+      width: 200px;
+      display: inline-block;
+      text-align: right; }
+      .profile__right__links__button {
+        color: black; }
+      .profile__right__links__menu {
+        display: none;
+        position: absolute;
+        top: 30px;
+        right: 0;
+        -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        width: 150px;
+        text-align: center;
+        border-radius: 5px; }
+        .profile__right__links__menu__item {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+          .profile__right__links__menu__item:last-child {
+            border-bottom: none; }
+          .profile__right__links__menu__item__link {
+            display: inline-block;
+            padding: 15px;
+            color: black;
+            width: calc(100% - 30px); }
       .profile__right__links__header {
         display: inline-block;
         width: 100%;
@@ -417,6 +443,11 @@ a {
           border-bottom-right-radius: 5px; }
   .profile__left, .profile__right {
     display: inline-block; }
+  .profile__panel {
+    margin-top: 30px; }
 
 .modal {
   display: none; }
+
+#delete-league {
+  margin: 40px 0; }

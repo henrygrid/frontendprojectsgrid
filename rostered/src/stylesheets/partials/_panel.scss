@@ -45,6 +45,15 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   padding: 15px 0;
+  position: relative;
+
+  &__add {
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
 }
 
 .panel__body {
