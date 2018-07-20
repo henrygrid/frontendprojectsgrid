@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Header from '../header.js';
-import TeamProfileView from './profile-view.js';
-import TeamProfileEdit from './profile-edit.js';
+import PlayerProfileView from './profile-view.js';
+import PlayerProfileEdit from './profile-edit.js';
 import {
   Route,
   Link,
   withRouter
 } from 'react-router-dom';
 
-class TeamProfile extends React.Component {
+class PlayerProfile extends React.Component {
 
     constructor(props) {
       super(props);
@@ -25,7 +25,7 @@ class TeamProfile extends React.Component {
         });
       }
 
-      handleChangeStats (e, name, players) {
+      handleChangeStats (e, name) {
         e.preventDefault();
         this.setState({
           isEditing: !this.state.isEditing
@@ -33,34 +33,36 @@ class TeamProfile extends React.Component {
         let stats = this.props.stats;
         let leagueId = this.props.location.state.leagueIndex;
         let teamId = this.props.location.state.teamIndex;
+        let playerId = this.props.location.state.playerIndex;
         // stats.leagues[leagueId].teams[teamId].players = players;
-        stats.leagues[leagueId].teams[teamId].name = name;
+        stats.leagues[leagueId].teams[teamId].players[playerId].name = name;
         this.props.onStatChange(stats);
       }
 
-      handlePlayerEdits (e, players) {
-        e.preventDefault();
-        // this.setState({
-        //   isEditing: !this.state.isEditing
-        // });
-        let stats = this.props.stats;
-        let leagueId = this.props.location.state.leagueIndex;
-        let teamId = this.props.location.state.teamIndex;
-        stats.leagues[leagueId].teams[teamId].players = players;
-        this.props.onStatChange(stats);
-      }
+      // handlePlayerEdits (e, players) {
+      //   e.preventDefault();
+      //   // this.setState({
+      //   //   isEditing: !this.state.isEditing
+      //   // });
+      //   let stats = this.props.stats;
+      //   let leagueId = this.props.location.state.leagueIndex;
+      //   let teamId = this.props.location.state.teamIndex;
+      //   stats.leagues[leagueId].teams[teamId].players = players;
+      //   this.props.onStatChange(stats);
+      // }
 
       render () {
         let leagueId = this.props.location.state.leagueIndex;
         let teamId = this.props.location.state.teamIndex;
+        let playerId = this.props.location.state.playerIndex;
         console.log(this.props.stats.leagues);
-        let team = this.props.stats.leagues[leagueId].teams[teamId];
+        let player = this.props.stats.leagues[leagueId].teams[teamId].players[playerId];
         let view;
 
         if (!this.state.isEditing) {
-          view = <TeamProfileView team={team} handlePlayerEdits={(e, players) => this.handlePlayerEdits(e, players)} onClick={(e) => this.editToggle(e)} />;
+          view = <PlayerProfileView player={player} onClick={(e) => this.editToggle(e)} />;
         } else {
-          view = <TeamProfileEdit team={team} handlePlayerEdits={(e, players) => this.handlePlayerEdits(e, players)} onClick={(e, name, players) => this.handleChangeStats(e, name, players)} onEditToggle={(e) => this.editToggle(e)}/>;
+          view = <PlayerProfileEdit player={player} onClick={(e, name) => this.handleChangeStats(e, name)} onEditToggle={(e) => this.editToggle(e)}/>;
         }
 
         return (
@@ -82,4 +84,4 @@ class TeamProfile extends React.Component {
 //   isEditing: PropTypes.boolean
 // };
 
-export default withRouter(TeamProfile);
+export default withRouter(PlayerProfile);

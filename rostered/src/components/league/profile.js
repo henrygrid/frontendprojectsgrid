@@ -5,7 +5,8 @@ import LeagueProfileView from './profile-view.js';
 import LeagueProfileEdit from './profile-edit.js';
 import {
   Route,
-  Link
+  Link,
+  withRouter
 } from 'react-router-dom';
 
 class LeagueProfile extends React.Component {
@@ -30,7 +31,7 @@ class LeagueProfile extends React.Component {
           isEditing: !this.state.isEditing
         });
         let stats = this.props.stats;
-        let id = this.props.match.params.id;
+        let id = this.props.location.state.index;
         stats.leagues[id].name = name;
         stats.leagues[id].createdDate = date;
         console.log(stats.leagues[id]);
@@ -43,15 +44,15 @@ class LeagueProfile extends React.Component {
         //   isEditing: !this.state.isEditing
         // });
         let stats = this.props.stats;
-        let id = this.props.match.params.id;
+        let id = this.props.location.state.index;
         stats.leagues[id].teams = teams;
         console.log(stats.leagues[id]);
         this.props.onStatChange(stats);
       }
 
       render () {
-        let id = this.props.match.params.id;
-        console.log(this.props.stats.leagues);
+        let id = this.props.location.state.index;
+        console.log(this.props.location);
         let league = this.props.stats.leagues[id];
         let view;
 
@@ -80,4 +81,4 @@ class LeagueProfile extends React.Component {
 //   isEditing: PropTypes.boolean
 // };
 
-export default LeagueProfile;
+export default withRouter(LeagueProfile);

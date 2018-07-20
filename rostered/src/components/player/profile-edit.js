@@ -7,7 +7,7 @@ import {
   Link
 } from 'react-router-dom';
 
-class TeamProfileEdit extends React.Component {
+class PlayerProfileEdit extends React.Component {
 
   showAdd (e) {
     e.preventDefault();
@@ -50,8 +50,7 @@ class TeamProfileEdit extends React.Component {
   }
 
   onStatChange (e) {
-    let title = document.getElementById('team-name').value;
-    let createdDate = document.getElementById('team-created-date').value;
+    let title = document.getElementById('player-name').value;
     this.props.onClick(e, title);
   }
 
@@ -67,13 +66,13 @@ class TeamProfileEdit extends React.Component {
   }
 
       render () {
-        let team = this.props.team;
+        let player = this.props.player;
 
         return (
         <div className="profile__container">
           <div className="profile">
             <div className="profile__left">
-              <h1 className="profile__left__title">{team.name}</h1>
+              <h1 className="profile__left__title">{player.name}</h1>
               <div className="profile__left__image">
                 <img src="http://lorempixel.com/200/200/sports" />
               </div>
@@ -97,17 +96,17 @@ class TeamProfileEdit extends React.Component {
                 <div className="profile__right__list__item">
                   <dt className="profile__right__list__item__title">Team Name</dt>
                   <dd className="profile__right__list__item__data">
-                    <input id="team-name" className="profile__right__list__item__data__field" defaultValue={team.name} />
+                    <input id="player-name" className="profile__right__list__item__data__field" defaultValue={player.name} />
                   </dd>
                 </div>
                 <div className="profile__right__list__item">
-                  <dt className="profile__right__list__item__title">Number of Players</dt>
-                  <dd className="profile__right__list__item__data">{team.players.length}</dd>
+                  <dt className="profile__right__list__item__title">Position</dt>
+                  <dd className="profile__right__list__item__data">{player.position}</dd>
                 </div>
                 <div className="profile__right__list__item">
                   <dt className="profile__right__list__item__title">Created</dt>
                   <dd className="profile__right__list__item__data">
-                    <input id="team-created-date" className="profile__right__list__item__data__field" defaultValue="today" />
+                    <input id="player-created-date" className="profile__right__list__item__data__field" defaultValue="today" />
                   </dd>
                 </div>
               </dl>
@@ -124,36 +123,6 @@ class TeamProfileEdit extends React.Component {
                       </div>
                     </div>
                   </div>
-              </div>
-            </div>
-            <div className="panel panel__full-width profile__panel">
-              <div className="panel__header">
-                <h1 className="panel__title">Standings</h1>
-                <i className="fa fa-plus panel__header__add" onClick={(e) => this.showAdd(e) } ></i>
-              </div>
-              <div className="panel__body">
-                <ul className="panel__list">
-                {team.players.map((player, i) =>
-
-                    <li className="panel__list__item">
-                      <Link to={`players/profile`} className="panel__list__item__title"><i className="fa fa-futbol panel__list__item__title__icon" aria-hidden="true"></i>{player.name}
-                        <span className="right js-delete-team">
-                          <i className="fa fa-times red" onClick={(e) => this.removePlayer(e) }></i>
-                        </span>
-                      </Link>
-                    </li>
-
-                )}
-                  <li id="addForm" className="panel__list__item hidden">
-                    <form className="panel__list__item__title" >
-                      <input id="newPlayer" className="panel__list__item__title__input" type="text" placeholder="Player Name"/>
-                      <span className="right">
-                        <i className="fa fa-check green margin-right-20" onClick={(e) => this.addPlayer(e) }></i>
-                        <i className="fa fa-times red" onClick={(e) => this.hideAdd(e) }></i>
-                      </span>
-                    </form>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
@@ -173,4 +142,4 @@ class TeamProfileEdit extends React.Component {
 //   isEditing: PropTypes.boolean
 // };
 
-export default TeamProfileEdit;
+export default PlayerProfileEdit;

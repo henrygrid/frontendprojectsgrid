@@ -1,7 +1,7 @@
 var rosteredData = {
   leagues: [
     {
-      id: "",
+      leagueId: "1a1",
       sport: "soccer",
       icon: "fa fa-futbol",
       name: "EX Flint Adult Soccer",
@@ -199,7 +199,7 @@ var rosteredData = {
       ]
     },
     {
-      id: "",
+      leagueId: "1a2",
       sport: "basketball",
       icon: "fa fa-basketball-ball",
       name: "Rochester Kids Basketball",

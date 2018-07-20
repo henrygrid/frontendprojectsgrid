@@ -5,7 +5,8 @@ import LeagueProfile from './profile.js';
 import {
   Route,
   Link,
-  Redirect
+  Redirect,
+  withRouter
 } from 'react-router-dom';
 
 class LeagueDashboard extends React.Component {
@@ -29,7 +30,7 @@ class LeagueDashboard extends React.Component {
           </div>
           <Route exact path={match.path} render={ () => <Redirect to={`${match.path}/dashboard`} />} />
           <Route exact path={`${match.path}/dashboard`} render={ () => <LeagueDashboardTable stats={this.props.stats} onStatChange={(stats) => this.props.onStatChange(stats)} match={this.props.match} />} />
-          <Route exact path={`${match.path}/profile/:id`} render={ ({match}) => <LeagueProfile stats={this.props.stats} onStatChange={(stats) => this.props.onStatChange(stats)} match={match} />} />
+          <Route exact path={`${match.path}/profile/:leagueid`} render={ ({match}) => <LeagueProfile stats={this.props.stats} onStatChange={(stats) => this.props.onStatChange(stats)} match={match} />} />
         </section>
       </div>
     );
@@ -48,11 +49,16 @@ class LeagueDashboardTable extends React.Component {
         </div>
         <div className="panel__body">
           <ul className="panel__list">
-          {this.props.stats.leagues.map((league, i) =>
-
-              <li className="panel__list__item"><Link to={`${this.props.match.url}/profile/${i}`} className="panel__list__item__title"><i className={league.icon} aria-hidden="true"></i> {league.name}</Link></li>
-
-          )}
+          {this.props.stats.leagues.map((league, i) => {
+              let name = league.name.replace(/\s/g, '');
+              return <li className="panel__list__item"><Link to={{
+                pathname: `${this.props.match.url}/profile/${name}`,
+                state: {
+                  index: i
+                }
+              }} className="panel__list__item__title"><i className={league.icon} aria-hidden="true"></i> {league.name}</Link></li>;
+            })
+          }
           </ul>
         </div>
       </div>
@@ -79,4 +85,4 @@ class LeagueDashboardTable extends React.Component {
 //   isEditing: PropTypes.boolean
 // };
 
-export default LeagueDashboard;
+export default withRouter(LeagueDashboard);

@@ -57,7 +57,7 @@ class App extends Component {
           <Route exact path="/" component={Login} />
           <Route path="/home" render={ () => <Dashboard stats={this.state.stats} onStatChange={(stats) => this.onStatChange(stats)} />} />
           <Route path="/leagues" render={ ({match}) => <LeagueDashboard stats={this.state.stats} match={match} onStatChange={(stats) => this.onStatChange(stats)} />} />
-          <Route path="/teams" render={ () => <TeamDashboard stats={this.state.stats} onStatChange={(stats) => this.onStatChange(stats)} />} />
+          <Route path="/teams" render={ ({match}) => <TeamDashboard stats={this.state.stats} match={match} onStatChange={(stats) => this.onStatChange(stats)} />} />
           <Route path="/players" render={ () => <PlayerDashboard stats={this.state.stats} onStatChange={(stats) => this.onStatChange(stats)} />} />
         </div>
       </BrowserRouter>
