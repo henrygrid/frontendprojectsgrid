@@ -31,7 +31,7 @@ class LeagueProfile extends React.Component {
           isEditing: !this.state.isEditing
         });
         let stats = this.props.stats;
-        let id = this.props.location.state.index;
+        let id = this.props.location.state.leagueIndex;
         stats.leagues[id].name = name;
         stats.leagues[id].createdDate = date;
         console.log(stats.leagues[id]);
@@ -44,20 +44,20 @@ class LeagueProfile extends React.Component {
         //   isEditing: !this.state.isEditing
         // });
         let stats = this.props.stats;
-        let id = this.props.location.state.index;
+        let id = this.props.location.state.leagueIndex;
         stats.leagues[id].teams = teams;
         console.log(stats.leagues[id]);
         this.props.onStatChange(stats);
       }
 
       render () {
-        let id = this.props.location.state.index;
+        let id = this.props.location.state.leagueIndex;
         console.log(this.props.location);
         let league = this.props.stats.leagues[id];
         let view;
 
         if (!this.state.isEditing) {
-          view = <LeagueProfileView league={league} handleTeamEdits={(e, teams) => this.handleTeamEdits(e, teams)} onClick={(e) => this.editToggle(e)} />;
+          view = <LeagueProfileView league={league} index={id} match={this.props.match} handleTeamEdits={(e, teams) => this.handleTeamEdits(e, teams)} onClick={(e) => this.editToggle(e)} />;
         } else {
           view = <LeagueProfileEdit league={league} handleTeamEdits={(e, teams) => this.handleTeamEdits(e, teams)} onClick={(e, name, date) => this.handleChangeStats(e, name, date)} onEditToggle={(e) => this.editToggle(e)}/>;
         }

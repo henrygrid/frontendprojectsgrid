@@ -54,11 +54,12 @@ class TeamProfile extends React.Component {
         let leagueId = this.props.location.state.leagueIndex;
         let teamId = this.props.location.state.teamIndex;
         console.log(this.props.stats.leagues);
+        let leagueName = this.props.stats.leagues[leagueId].name;
         let team = this.props.stats.leagues[leagueId].teams[teamId];
         let view;
 
         if (!this.state.isEditing) {
-          view = <TeamProfileView team={team} handlePlayerEdits={(e, players) => this.handlePlayerEdits(e, players)} onClick={(e) => this.editToggle(e)} />;
+          view = <TeamProfileView leagueId={leagueId} teamId={teamId} leagueName={leagueName} team={team} handlePlayerEdits={(e, players) => this.handlePlayerEdits(e, players)} onClick={(e) => this.editToggle(e)} />;
         } else {
           view = <TeamProfileEdit team={team} handlePlayerEdits={(e, players) => this.handlePlayerEdits(e, players)} onClick={(e, name, players) => this.handleChangeStats(e, name, players)} onEditToggle={(e) => this.editToggle(e)}/>;
         }

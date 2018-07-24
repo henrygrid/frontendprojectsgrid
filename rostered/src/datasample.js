@@ -207,7 +207,7 @@ var rosteredData = {
       teams: [
         {
           id: "",
-          name: "Wombats",
+          name: "Bombs",
           coaches: [],
           rank: 1,
           record: "3-1",
@@ -270,7 +270,7 @@ var rosteredData = {
         },
         {
           id: "",
-          name: "Lightning",
+          name: "Thunder",
           coaches: [],
           rank: 2,
           record: "2-2",
@@ -333,7 +333,7 @@ var rosteredData = {
         },
         {
           id: "",
-          name: "Vikings",
+          name: "Ninjas",
           coaches: [],
           rank: 3,
           record: "1-3",

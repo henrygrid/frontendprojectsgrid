@@ -4,7 +4,8 @@ import Header from '../header.js';
 import $ from 'jquery';
 import {
   Route,
-  Link
+  Link,
+  withRouter
 } from 'react-router-dom';
 
 class LeagueProfileView extends React.Component {
@@ -97,16 +98,26 @@ class LeagueProfileView extends React.Component {
             </div>
             <div className="panel__body">
               <ul className="panel__list">
-              {league.teams.map((team, i) =>
+              {league.teams.map((team, i) => {
+                let leagueName = league.name.replace(/\s/g, '');
+                let teamName = team.name.replace(/\s/g, '');
+                let leagueId = this.props.index;
+                let teamId = i;
 
-                  <li className="panel__list__item">
-                    <Link to={`teams/profile`} className="panel__list__item__title"><i className="fa fa-futbol panel__list__item__title__icon" aria-hidden="true"></i>{team.name}
+                return  <li className="panel__list__item">
+                  <Link to={{
+                    pathname: `/teams/profile/${leagueName}/${teamName}`,
+                    state: {
+                      leagueIndex: leagueId,
+                      teamIndex: teamId
+                    }
+                  }} className="panel__list__item__title"><i className="fa fa-futbol panel__list__item__title__icon" aria-hidden="true"></i>{team.name}
                       <span className="right hidden js-delete-team">
                         <i className="fa fa-times red" onClick={(e) => this.removeTeam(e) }></i>
                       </span>
                     </Link>
                   </li>
-
+                }
               )}
                 <li id="addForm" className="panel__list__item hidden">
                   <form className="panel__list__item__title" >
@@ -136,4 +147,4 @@ class LeagueProfileView extends React.Component {
 //   isEditing: PropTypes.boolean
 // };
 
-export default LeagueProfileView;
+export default withRouter(LeagueProfileView);

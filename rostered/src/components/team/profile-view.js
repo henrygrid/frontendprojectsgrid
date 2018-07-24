@@ -97,15 +97,28 @@ class TeamProfileView extends React.Component {
             </div>
             <div className="panel__body">
               <ul className="panel__list">
-              {team.players.map((player, i) =>
+              {team.players.map((player, i) => {
+                let leagueName = this.props.leagueName.replace(/\s/g, '');
+                let teamName = team.name.replace(/\s/g, '');
+                let playerName = player.name.replace(/\s/g, '');
+                let leagueId = this.props.leagueId;
+                let teamId = this.props.teamId;
 
-                  <li className="panel__list__item">
-                    <Link to={`players/profile`} className="panel__list__item__title"><i className="fa fa-futbol panel__list__item__title__icon" aria-hidden="true"></i>{player.name}
+                return  <li className="panel__list__item">
+                    <Link to={{
+                      pathname: `/players/profile/${leagueName}/${teamName}/${playerName}`,
+                      state: {
+                        leagueIndex: leagueId,
+                        teamIndex: teamId,
+                        playerIndex: i
+                      }
+                    }} className="panel__list__item__title"><i className="fa fa-futbol panel__list__item__title__icon" aria-hidden="true"></i>{player.name}
                       <span className="right hidden js-delete-player">
                         <i className="fa fa-times red" onClick={(e) => this.removePlayer(e) }></i>
                       </span>
                     </Link>
                   </li>
+                }
 
               )}
                 <li id="addForm" className="panel__list__item hidden">

@@ -54,7 +54,7 @@ class LeagueDashboardTable extends React.Component {
               return <li className="panel__list__item"><Link to={{
                 pathname: `${this.props.match.url}/profile/${name}`,
                 state: {
-                  index: i
+                  leagueIndex: i
                 }
               }} className="panel__list__item__title"><i className={league.icon} aria-hidden="true"></i> {league.name}</Link></li>;
             })
