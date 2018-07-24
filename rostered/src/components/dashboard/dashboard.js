@@ -120,8 +120,7 @@ class Dashboard extends React.Component {
             </div>
             <h1 className="content__header">Dashboard</h1>
             <League stats={this.props.stats} onStatChange={(stats) => this.props.onStatChange(stats)}/>
-            <Team />
-            <Player />
+            <Player scorers={this.props.scorers} />
           </section>
         </div>
       );

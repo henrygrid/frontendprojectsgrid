@@ -176,6 +176,25 @@
   margin-right: 10px;
 }
 
+.column-one-third,
+.column-two-thirds {
+  display: inline-block;
+}
+
+.column-one-third {
+  width: 15%;
+  float: right;
+  text-align: right;
+}
+
+.column-two-thirds {
+  width: 30%;
+}
+
+.panel__field__column {
+  padding: 15px;
+}
+
 .fa {
   cursor: pointer;
 }
