@@ -111,7 +111,7 @@ class Dashboard extends React.Component {
     render() {
       return (
         <div className="container">
-          <Header />
+          <Header handleLogout={() => this.props.handleLogout()}/>
           <section className="content">
             <div className="search__wrapper">
               <input type="text" className="search__input" />
@@ -120,7 +120,7 @@ class Dashboard extends React.Component {
             </div>
             <h1 className="content__header">Dashboard</h1>
             <League stats={this.props.stats} onStatChange={(stats) => this.props.onStatChange(stats)}/>
-            <Player scorers={this.props.scorers} />
+            {/* <Player scorers={this.props.scorers} /> */}
           </section>
         </div>
       );

@@ -13,12 +13,12 @@ const Header = () => {
       <h1 className="App-title">Rostered</h1>
       <nav className="App-nav">
         <ul className="App-nav__list">
-          <li className="App-nav__list__item"><NavLink exact to="/home">Home</NavLink></li>
+          <li className="App-nav__list__item"><NavLink exact to="/">Home</NavLink></li>
           <li className="App-nav__list__item"><NavLink exact to="/leagues">Leagues</NavLink></li>
           <li className="App-nav__list__item"><NavLink exact to="/teams">Teams</NavLink></li>
           <li className="App-nav__list__item"><NavLink exact to="/players">Players</NavLink></li>
           <li className="App-nav__list__item">
-            <a href="" className="App-nav__list__item__profile">Image</a>
+            <NavLink exact to="/" className="App-nav__list__item__profile" onClick={() => this.props.handleLogout()}>Image</NavLink>
             <ul className="App-nav__list__item__sublist">
               <li className="App-nav__list__item__sublist__item"><Link exact to="/user/profile">Profile</Link></li>
               <li className="App-nav__list__item__sublist__item"><Link exact to="/user/settings">Settings</Link></li>

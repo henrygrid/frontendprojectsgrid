@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import unirest from 'unirest';
+import firebase, { auth, provider } from './firebase.js';
 import logo from './logo.svg';
 import Login from './components/login.js';
 import Container from './components/container.js';
@@ -22,11 +23,31 @@ class App extends Component {
     this.state = {
       stats: this.props.stats,
       leagues: this.props.stats.leagues,
-      scorers: []
+      scorers: [],
+      user: null
     };
   }
 
-  // componentDidMount() {
+  handleLoginChange(e, name, value) {
+    this.setState({
+      [name]: value
+    });
+  }
+
+  componentDidMount()  {
+    const dataBase = firebase.database().ref('data');
+    dataBase.on('value', (snapshot) => {
+      let stats = snapshot.val();
+      this.setState({stats:stats});
+    });
+    // auth.onAuthStateChanged((user) => {
+    //   if (user) {
+    //     this.setState({ user });
+    //   }
+    // });
+    // let data = this.state.stats;
+    // dataBase.push(data);
+  }
   //   unirest.get("https://sportsop-soccer-sports-open-data-v1.p.mashape.com/v1/leagues/serie-a/seasons/17-18/topscorers")
   //     .header("X-Mashape-Key", "CAPBosxyv2mshAgeJRPDSpJUrw1cp1kklHejsn3DArGDvA7miO")
   //     .header("X-Mashape-Host", "sportsop-soccer-sports-open-data-v1.p.mashape.com")
@@ -74,16 +95,41 @@ class App extends Component {
       this.setState({
         stats: stats
       });
+      let data = this.state.stats;
+      firebase.database().ref().set({data});
+  }
+
+  login() {
+    auth.signInWithPopup(provider)
+    .then((result) => {
+      const user = result.user;
+      this.setState({
+        user
+      });
+    });
+  }
+
+  logout() {
+    auth.signOut()
+      .then(() => {
+        this.setState({
+          user: null
+        });
+      });
   }
 
   render() {
     console.log(this.state.scorers);
+
     return (
       <BrowserRouter>
         <div className="App">
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossOrigin="anonymous" />
-          <Route exact path="/" component={Login} />
-          <Route path="/home" render={ () => <Dashboard stats={this.state.stats} scorers={this.state.scorers} onStatChange={(stats) => this.onStatChange(stats)} />} />
+          {this.state.user ?
+            <Route exact path="/" render={ () => <Dashboard stats={this.state.stats} scorers={this.state.scorers} onStatChange={(stats) => this.onStatChange(stats)} handleLogout={() => this.logout() } />} />
+            :
+            <Route exact path="/" render={ () => <Login handleLogin={() => this.login() }/>} />
+          }
           <Route path="/leagues" render={ ({match}) => <LeagueDashboard stats={this.state.stats} match={match} onStatChange={(stats) => this.onStatChange(stats)} />} />
           <Route path="/teams" render={ ({match}) => <TeamDashboard stats={this.state.stats} match={match} onStatChange={(stats) => this.onStatChange(stats)} />} />
           <Route path="/players" render={ () => <PlayerDashboard stats={this.state.stats} onStatChange={(stats) => this.onStatChange(stats)} />} />
