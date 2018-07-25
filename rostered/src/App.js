@@ -2,16 +2,21 @@ import React, { Component } from 'react';
 import unirest from 'unirest';
 import firebase, { auth, provider } from './firebase.js';
 import logo from './logo.svg';
-import Login from './components/login.js';
+import Login from './components/login/login.js';
 import Container from './components/container.js';
 import Dashboard from './components/dashboard/dashboard.js';
 import LeagueDashboard from './components/league/dashboard.js';
 import LeagueProfile from './components/league/profile.js';
 import TeamDashboard from './components/team/dashboard.js';
 import PlayerDashboard from './components/player/dashboard.js';
+import LoginForm from './components/login/loginform.js';
+import SignupForm from './components/login/signupform.js';
+import ResetPasswordEmail from './components/login/resetpasswordemail.js';
+import ResetPasswordConfirm from './components/login/resetpasswordconfirm.js';
 import {
   BrowserRouter,
-  Route
+  Route,
+  Redirect
 } from 'react-router-dom';
 
 import $ from 'jquery';
@@ -41,51 +46,12 @@ class App extends Component {
       this.setState({stats:stats});
     });
     // auth.onAuthStateChanged((user) => {
+    //   console.log(user);
     //   if (user) {
     //     this.setState({ user });
     //   }
     // });
-    // let data = this.state.stats;
-    // dataBase.push(data);
   }
-  //   unirest.get("https://sportsop-soccer-sports-open-data-v1.p.mashape.com/v1/leagues/serie-a/seasons/17-18/topscorers")
-  //     .header("X-Mashape-Key", "CAPBosxyv2mshAgeJRPDSpJUrw1cp1kklHejsn3DArGDvA7miO")
-  //     .header("X-Mashape-Host", "sportsop-soccer-sports-open-data-v1.p.mashape.com")
-  //     .end(result => {
-  //       this.setState({scorers: [
-  //         {
-  //           rank: 1,
-  //           name: result.body.data.topscorers[0].fullname,
-  //           goals: result.body.data.topscorers[0].goals
-  //         },
-  //         {
-  //           rank: 2,
-  //           name: result.body.data.topscorers[1].fullname,
-  //           goals: result.body.data.topscorers[1].goals
-  //         },
-  //         {
-  //           rank: 3,
-  //           name: result.body.data.topscorers[2].fullname,
-  //           goals: result.body.data.topscorers[2].goals
-  //         },
-  //       ]});
-  //     });
-  // }
-
-  // onRankChange (i, rank) {
-  //   this.state.stats.leagues[0].teams[i].rank = rank;
-  //   this.setState(this.state);
-  // }
-  //
-  // onNameChange (i, name) {
-  //   this.state.stats.leagues[0].teams[i].name = name;
-  //   this.setState(this.state);
-  // }
-  //
-  // onRecordChange (i, record) {
-  //   this.state.stats.leagues[0].teams[i].record = record;
-  //   this.setState(this.state);
-  // }
 
   logData () {
     console.log(this.state.leagues[0].teams[0].rank);
@@ -99,23 +65,39 @@ class App extends Component {
       firebase.database().ref().set({data});
   }
 
-  login() {
-    auth.signInWithPopup(provider)
+  login(email, password) {
+    auth.signInWithEmailAndPassword(email, password)
     .then((result) => {
       const user = result.user;
-      this.setState({
-        user
-      });
+      console.log(user);
+      this.setState({user});
+    }).catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorCode + " " + errorMessage);
     });
   }
 
-  logout() {
+  logout(e) {
+    e.preventDefault();
     auth.signOut()
       .then(() => {
         this.setState({
           user: null
         });
       });
+  }
+
+  addUser(email, username, password1, password2) {
+    auth.createUserWithEmailAndPassword(email, password2).
+    then((result) => {
+      const user = result.user;
+      this.setState({user});
+    }).catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorCode + " " + errorMessage);
+    });
   }
 
   render() {
@@ -126,9 +108,20 @@ class App extends Component {
         <div className="App">
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossOrigin="anonymous" />
           {this.state.user ?
-            <Route exact path="/" render={ () => <Dashboard stats={this.state.stats} scorers={this.state.scorers} onStatChange={(stats) => this.onStatChange(stats)} handleLogout={() => this.logout() } />} />
+            <div>
+              <Route exact path="/" render={ () => <Redirect to="/home" />} />
+              <Route exact path="/home" render={ () => <Dashboard stats={this.state.stats} scorers={this.state.scorers} onStatChange={(stats) => this.onStatChange(stats)} handleLogout={(e) => this.logout(e) } />} />
+            </div>
             :
-            <Route exact path="/" render={ () => <Login handleLogin={() => this.login() }/>} />
+            <div className="container">
+              <div className="login__background">
+                <Route exact path="/home" render={ () => <Redirect to="/" />} />
+                <Route exact path="/" render={ () => <LoginForm user={this.state.user} handleLogin={(email, password) => this.login(email, password) }/>} />
+                <Route path="/signup" render={() => <SignupForm handleSignup={(email, username, password1, password2) => this.addUser(email, username, password1, password2) } />} />
+                <Route path="/resetpassword" render={() => <ResetPasswordEmail />} />
+                <Route path="/resetconfirm" render={() => <ResetPasswordConfirm />} />
+              </div>
+            </div>
           }
           <Route path="/leagues" render={ ({match}) => <LeagueDashboard stats={this.state.stats} match={match} onStatChange={(stats) => this.onStatChange(stats)} />} />
           <Route path="/teams" render={ ({match}) => <TeamDashboard stats={this.state.stats} match={match} onStatChange={(stats) => this.onStatChange(stats)} />} />

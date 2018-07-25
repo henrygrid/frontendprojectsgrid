@@ -111,7 +111,7 @@ class Dashboard extends React.Component {
     render() {
       return (
         <div className="container">
-          <Header handleLogout={() => this.props.handleLogout()}/>
+          <Header handleLogout={(e) => this.props.handleLogout(e)}/>
           <section className="content">
             <div className="search__wrapper">
               <input type="text" className="search__input" />
