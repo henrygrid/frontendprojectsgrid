@@ -18,7 +18,7 @@ const Header = () => {
           <li className="App-nav__list__item"><NavLink exact to="/teams">Teams</NavLink></li>
           <li className="App-nav__list__item"><NavLink exact to="/players">Players</NavLink></li>
           <li className="App-nav__list__item">
-            <a href="" className="App-nav__list__item__profile" onClick={(e) => this.props.handleLogout(e)}>Image</a>
+            <NavLink exact to="/" className="App-nav__list__item__profile" onClick={(e) => this.props.handleLogout(e)}>Image</NavLink>
             <ul className="App-nav__list__item__sublist">
               <li className="App-nav__list__item__sublist__item"><Link exact to="/user/profile">Profile</Link></li>
               <li className="App-nav__list__item__sublist__item"><Link exact to="/user/settings">Settings</Link></li>

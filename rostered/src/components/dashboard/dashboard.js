@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Header from '../header.js';
 import League from './league.js';
 import Team from './team.js';
@@ -110,18 +111,18 @@ class Dashboard extends React.Component {
 
     render() {
       return (
-        <div className="container">
-          <Header handleLogout={(e) => this.props.handleLogout(e)}/>
+        <div>
+          {/* <Header handleLogout={(e) => this.props.handleLogout(e)}/>
           <section className="content">
             <div className="search__wrapper">
               <input type="text" className="search__input" />
               <a href="" className="search__submit" onClick={(e) => this.searchData(e) }><span>Search</span></a>
               <Search stats={this.props.stats} results={this.state.results}/>
-            </div>
+            </div> */}
             <h1 className="content__header">Dashboard</h1>
             <League stats={this.props.stats} onStatChange={(stats) => this.props.onStatChange(stats)}/>
-            {/* <Player scorers={this.props.scorers} /> */}
-          </section>
+            {/* <Player scorers={this.props.scorers} />
+          </section> */}
         </div>
       );
     }
