@@ -60,9 +60,9 @@ class PlayerProfile extends React.Component {
         let view;
 
         if (!this.state.isEditing) {
-          view = <PlayerProfileView player={player} onClick={(e) => this.editToggle(e)} />;
+          view = <PlayerProfileView currentUser={this.props.currentUser} player={player} onClick={(e) => this.editToggle(e)} />;
         } else {
-          view = <PlayerProfileEdit player={player} onClick={(e, name) => this.handleChangeStats(e, name)} onEditToggle={(e) => this.editToggle(e)}/>;
+          view = <PlayerProfileEdit currentUser={this.props.currentUser} player={player} onClick={(e, name) => this.handleChangeStats(e, name)} onEditToggle={(e) => this.editToggle(e)}/>;
         }
 
         return (

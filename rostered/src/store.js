@@ -58,4 +58,8 @@ function Reducer (state = initialState, action) {
    return state
   }
 }
-export default createStore(Reducer, applyMiddleware(thunkMiddleware))
+export default createStore(
+  Reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), 
+  applyMiddleware(thunkMiddleware)
+)

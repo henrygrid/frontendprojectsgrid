@@ -57,9 +57,9 @@ class LeagueProfile extends React.Component {
         let view;
 
         if (!this.state.isEditing) {
-          view = <LeagueProfileView league={league} index={id} match={this.props.match} handleTeamEdits={(e, teams) => this.handleTeamEdits(e, teams)} onClick={(e) => this.editToggle(e)} />;
+          view = <LeagueProfileView currentUser={this.props.currentUser} league={league} index={id} match={this.props.match} handleTeamEdits={(e, teams) => this.handleTeamEdits(e, teams)} onClick={(e) => this.editToggle(e)} />;
         } else {
-          view = <LeagueProfileEdit league={league} handleTeamEdits={(e, teams) => this.handleTeamEdits(e, teams)} onClick={(e, name, date) => this.handleChangeStats(e, name, date)} onEditToggle={(e) => this.editToggle(e)}/>;
+          view = <LeagueProfileEdit currentUser={this.props.currentUser} league={league} handleTeamEdits={(e, teams) => this.handleTeamEdits(e, teams)} onClick={(e, name, date) => this.handleChangeStats(e, name, date)} onEditToggle={(e) => this.editToggle(e)}/>;
         }
 
         return (

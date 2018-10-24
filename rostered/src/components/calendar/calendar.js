@@ -17,13 +17,38 @@ class Calendar extends React.Component {
     super(props);
     this.state = {
       events: this.props.events,
+      myEvents: "",
       createPopup: "",
+      currentUser: this.props.currentUser,
       newEvent: {
         title:"",
         start: "",
-        end: ""
-      }
+        end: "",
+        eventUser: this.props.user.uid
+      },
     };
+  }
+
+  componentWillMount() {
+    this.setState({
+      newEvent: {
+        title: "",
+        start: "",
+        end: "",
+        eventUser: this.props.user.uid
+      }
+    });
+    this.setState({events: this.props.events});
+
+    let myEvents = [];
+    let events = this.state.events;
+    events.map((event, i) => {
+      if (this.props.user.uid === event.eventUser) {
+        myEvents.push(event);
+      }
+    });
+    console.log(myEvents);
+    this.setState({myEvents: myEvents});
   }
 
   getEventData(title) {
@@ -33,13 +58,20 @@ class Calendar extends React.Component {
       newEvent: newEvent
     });
     let events = this.state.events;
+    let myEvents = this.state.myEvents;
     events.push(this.state.newEvent);
+    myEvents.push(this.state.newEvent);
+    this.setState({
+      myEvents: myEvents
+    });
+    console.log(events);
     this.props.setEvents(events);
     this.setState({
       newEvent: {
         title: "",
         start: "",
-        end: ""
+        end: "",
+        eventUser: this.props.currentUser.userId
       },
       createPopup: ""
     });
@@ -52,10 +84,11 @@ class Calendar extends React.Component {
   // }
 
   showCreatePopup(slotInfo) {
-    console.log(slotInfo);
+
     var newEvent = this.state.newEvent;
     newEvent.start = slotInfo.start;
     newEvent.end = slotInfo.end;
+    console.log(newEvent);
     this.setState({
       createPopup: <CalendarCreateEvent getEventData={(title) => this.getEventData(title)} closeModal={(e) => this.closeModal(e)} />,
       newEvent: newEvent
@@ -73,6 +106,8 @@ class Calendar extends React.Component {
   }
 
   render () {
+    let allViews = Object.keys(BigCalendar.Views).map(k => BigCalendar.Views[k]);
+    let events = this.state.myEvents;
 
     return (
         <div className="calendar-container">
@@ -81,7 +116,7 @@ class Calendar extends React.Component {
             style={{height: '420px'}}
             selectable={true}
             popup={true}
-            events={this.state.events}
+            events={events}
             onSelectSlot={(slotInfo) => this.showCreatePopup(slotInfo)}
             onSelectEvent={(event, e) => this.logEvent(event, e)}
           />

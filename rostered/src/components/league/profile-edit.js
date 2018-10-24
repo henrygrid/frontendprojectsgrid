@@ -51,8 +51,10 @@ class LeagueProfileEdit extends React.Component {
 
   onStatChange (e) {
     let title = document.getElementById('league-name').value;
+    let urlTitle = title.replace(/\s/g, '');
     let createdDate = document.getElementById('league-created-date').value;
     this.props.onClick(e, title, createdDate);
+    this.props.history.push(`${this.props.match.url}/profile/${urlTitle}`);
   }
 
   toggleConfirm (e) {
