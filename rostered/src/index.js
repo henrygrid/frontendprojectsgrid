@@ -19,7 +19,7 @@ import {
 
 ReactDOM.render(
   <Provider store={store}>
-    <App stats={rosteredData} />
+    <App />
   </Provider>,
   document.getElementById('root'));
 registerServiceWorker();

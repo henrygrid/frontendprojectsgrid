@@ -32,7 +32,9 @@ export function getStatsThunk() {
 * LISTENERS
 */
 export function watchStatUpdatedEvent(dispatch) {
- firebase.database().ref('/').on('child_changed', (snap) => {    dispatch(updateStats(snap.val()));
+ firebase.database().ref('stats').on('child_changed', (snap) => {
+   console.log(snap.val());
+   dispatch(updateStats(snap.val()));
  });
 }
 
@@ -51,6 +53,7 @@ let initialState = {
 function Reducer (state = initialState, action) {
  switch (action.type) {
   case GET_STATS:
+    console.log(action.stats);
    return action.stats.stats
   case UPDATE_STATS:
    return action.stats.stats
@@ -60,6 +63,6 @@ function Reducer (state = initialState, action) {
 }
 export default createStore(
   Reducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), 
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
   applyMiddleware(thunkMiddleware)
 )

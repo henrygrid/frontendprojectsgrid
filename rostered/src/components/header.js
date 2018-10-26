@@ -46,7 +46,9 @@ class Header extends React.Component {
             }
             <li className="App-nav__list__item"><NavLink exact to="/schedule" className="App-nav__list__item__link">Schedule</NavLink></li>
             <li className="App-nav__list__item">
-              <a href="" onClick={(e) => this.sublistToggle(e)} className="App-nav__list__item__profile"></a>
+              <a href="" onClick={(e) => this.sublistToggle(e)} className="App-nav__list__item__profile">
+                <img className="App-nav__list__item__profile--image" src={this.props.currentUser.photoUrl} alt={this.props.currentUser.firstName} />
+              </a>
               <ul className="App-nav__list__item__sublist">
                 <li className="App-nav__list__item__sublist__item"><Link exact to="/user/profile" className="App-nav__list__item__sublist__item__link">Profile</Link></li>
                 <li className="App-nav__list__item__sublist__item"><Link exact to="/user/settings" className="App-nav__list__item__sublist__item__link">Settings</Link></li>

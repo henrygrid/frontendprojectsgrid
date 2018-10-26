@@ -22,6 +22,9 @@ import ResetPasswordEmail from './components/login/resetpasswordemail.js';
 import ResetPasswordConfirm from './components/login/resetpasswordconfirm.js';
 import UserProfile from './components/user/profile.js';
 import CalendarContainer from './components/calendar/calendar.js';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBowlingBall } from '@fortawesome/free-solid-svg-icons'
 import {
   BrowserRouter,
   Route,
@@ -32,6 +35,8 @@ import {
 
 import $ from 'jquery';
 import './stylesheets/App.css';
+
+library.add(faBowlingBall);
 
 class App extends Component {
 
@@ -120,10 +125,10 @@ class App extends Component {
   // }
 
   clickOutside(e) {
-    // let searchWrapper = document.querySelector(".search__wrapper");
-    // if (!searchWrapper.contains(e.target)) {
-    //   $("#search-results").hide();
-    // }
+    let searchWrapper = document.querySelector(".search__wrapper");
+    if (searchWrapper && !searchWrapper.contains(e.target)) {
+      $("#search-results").hide();
+    }
   }
 
   // componentWillMount() {
@@ -276,12 +281,31 @@ class App extends Component {
   }
 
   setUsers() {
+    let events = [{
+      title: "Flint League Tourney",
+      start: new Date('October 26, 2018'),
+      end: new Date('October 27, 2018 10:24:00'),
+      eventUser: "DabvcWn4jiSoVonf6sjkeIIEU0p2",
+    },
+    {
+      title: "Wombats: Practice",
+      start: new Date('October 17, 2018'),
+      end: new Date('October 17, 2018 10:24:00'),
+      eventUser: "DabvcWn4jiSoVonf6sjkeIIEU0p2",
+    },
+    {
+      title: "Bombs: Team Dinner",
+      start: new Date('October 29, 2018'),
+      end: new Date('October 29, 2018 10:24:00'),
+      eventUser: "OCrRIeH9bATA5Tf4GgCdKrnT5wy2",
+    }];
     // let users = [
     //   {
     //     firstName: "Henry",
     //     lastName: "Morrow",
     //     userId: "DabvcWn4jiSoVonf6sjkeIIEU0p2",
     //     email: "hj.morrow@hotmail.com",
+    //     photoUrl: "",
     //     role: "admin"
     //   },
     //   {
@@ -289,6 +313,7 @@ class App extends Component {
     //     lastName: "Morrow",
     //     userId: "R81IIAMWKcap951Sj8b6W3JWsJw1",
     //     email: "hjmorrow23@gmail.com",
+    //     photoUrl: "",
     //     role: "admin"
     //   },
     //   {
@@ -296,6 +321,7 @@ class App extends Component {
     //     lastName: "Damon",
     //     userId: "Z5nGJosjlDNCzZCjk0aDzGHPnpw1",
     //     email: "axelthedamon@gmail.com",
+    //     photoUrl: "",
     //     role: "leagueAdmin",
     //     userLeagues:[
     //       {
@@ -309,6 +335,7 @@ class App extends Component {
     //     lastName: "Morrow",
     //     userId: "OCrRIeH9bATA5Tf4GgCdKrnT5wy2",
     //     email: "ammorrow18@gmail.com",
+    //     photoUrl: "",
     //     role: "coach",
     //     userLeagues:[
     //       {
@@ -328,6 +355,7 @@ class App extends Component {
     //     lastName: "Guest",
     //     userId: "TVBV3ifeAZOtZHLhcVXE8ZpIsb52",
     //     email: "guest@gmail.com",
+    //     photoUrl: "",
     //     role: "player",
     //     userLeagues:[
     //       {
@@ -343,7 +371,7 @@ class App extends Component {
     //     ]
     //   },
     // ];
-    // firebase.database().ref('users').set(users);
+    firebase.database().ref('events').set(events);
   }
 
   addUser(email, username, role, password1, password2) {
@@ -393,9 +421,35 @@ class App extends Component {
     });
   }
 
+  onUpdateUser(currentUser) {
+    console.log(currentUser);
+    this.setState({currentUser: currentUser});
+    firebase.database().ref('users').on('value',(snapshot) => {
+      let users = snapshot.val();
+      let updatedUsers = [];
+      users.map((userData, i) => {
+        if(userData.userId === this.state.user.uid) {
+          userData.email = currentUser.email;
+          userData.firstName = currentUser.firstName;
+          userData.lastName = currentUser.lastName;
+          userData.photoUrl = currentUser.photoUrl;
+          console.log(currentUser.photoUrl);
+          console.log(userData.photoUrl);
+        }
+        updatedUsers.push(userData);
+      });
+      firebase.database().ref('users').set(updatedUsers);
+    });
+  }
+
   setEvents(events) {
-    this.setState({events:events});
-    let data = this.state.events;
+    // console.log(events);
+    // let finalEvents = [];
+    // events.map((event, i) => {
+    //   console.log(event.start.getTime());
+    // });
+    // this.setState({events:events});
+    let data = events;
     let newEvents = [];
     data.map((event, i) => {
       event.start = new Date(event.start).getTime();
@@ -404,6 +458,7 @@ class App extends Component {
     });
     console.log(newEvents);
     firebase.database().ref('events').set(data);
+    this.setState({events:newEvents});
   }
 
   render() {
@@ -437,7 +492,7 @@ class App extends Component {
                       <Route path="/teams" render={ ({match}) => <TeamDashboard currentUser={this.state.currentUser} stats={this.props.stats} match={match} onStatChange={(stats) => this.onStatChange(stats)} />} />
                       <Route path="/players" render={ () => <PlayerDashboard currentUser={this.state.currentUser} stats={this.props.stats} onStatChange={(stats) => this.onStatChange(stats)} />} />
                       <Route path="/schedule" render={ ({match}) => <CalendarContainer user={this.state.user} currentUser={this.state.currentUser} user={this.state.user} stats={this.props.stats} events={this.state.events} setEvents={(events) => this.setEvents(events)} match={match} onStatChange={(stats) => this.onStatChange(stats)} />} />
-                      <Route path="/user/profile" render={ () => <UserProfile currentUser={this.state.currentUser} stats={this.props.stats} onStatChange={(stats) => this.onStatChange(stats)} />} />
+                      <Route path="/user/profile" render={ () => <UserProfile currentUser={this.state.currentUser} user={this.state.user} stats={this.props.stats} onUpdateUser={(currentUser) => this.onUpdateUser(currentUser)} />} />
                     </Switch>
                   </ReactCSSTransitionGroup>
                 </section>
@@ -474,6 +529,7 @@ class App extends Component {
 const mapState = state => ({
   stats: state
  })
+
 const mapDispatch = dispatch => {
  dispatch(getStatsThunk())
  watchStatUpdatedEvent(dispatch)
