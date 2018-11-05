@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators} from 'redux';
 // import * as actions from './actions/stats';
 import { connect } from 'react-redux';
-import { getStatsThunk, watchStatUpdatedEvent } from './store';
+import { getStatsThunk, watchStatUpdatedEvent } from './index';
 import unirest from 'unirest';
 import firebase, { auth, provider, database, updateFirebase } from './firebase.js';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
@@ -109,6 +109,9 @@ class App extends Component {
         // });
       }
     });
+    // sessionStorage.setItem('sessionData', "test again");
+    let cachedData = sessionStorage.getItem('sessionData');
+    console.log(cachedData);
   }
 
   componentWillMount() {

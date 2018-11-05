@@ -25,6 +25,10 @@ class LeagueProfile extends React.Component {
         });
       }
 
+      updateDeletedLeague(stats) {
+        this.props.onStatChange(stats);
+      }
+
       handleChangeStats (e, name, date) {
         e.preventDefault();
         this.setState({
@@ -57,9 +61,27 @@ class LeagueProfile extends React.Component {
         let view;
 
         if (!this.state.isEditing) {
-          view = <LeagueProfileView currentUser={this.props.currentUser} league={league} index={id} match={this.props.match} handleTeamEdits={(e, teams) => this.handleTeamEdits(e, teams)} onClick={(e) => this.editToggle(e)} />;
+          view = <LeagueProfileView
+            currentUser={this.props.currentUser}
+            league={league}
+            history={this.props.history}
+            index={id}
+            match={this.props.match}
+            handleTeamEdits={(e, teams) => this.handleTeamEdits(e, teams)}
+            onClick={(e) => this.editToggle(e)}
+          />;
         } else {
-          view = <LeagueProfileEdit currentUser={this.props.currentUser} league={league} handleTeamEdits={(e, teams) => this.handleTeamEdits(e, teams)} onClick={(e, name, date) => this.handleChangeStats(e, name, date)} onEditToggle={(e) => this.editToggle(e)}/>;
+          view = <LeagueProfileEdit
+            currentUser={this.props.currentUser}
+            stats={this.props.stats}
+            league={league}
+            history={this.props.history}
+            match={this.props.match}
+            handleTeamEdits={(e, teams) => this.handleTeamEdits(e, teams)}
+            onClick={(e, name, date) => this.handleChangeStats(e, name, date)}
+            onEditToggle={(e) => this.editToggle(e)}
+            onDeletedLeague={(e) => this.updateDeletedLeague(e)}
+          />;
         }
 
         return (
