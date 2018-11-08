@@ -47,24 +47,24 @@ class App extends Component {
       // leagues: this.props.stats.leagues,
       scorers: [],
       results: [],
-      events: [{
-        title: "Flint League Tourney",
-        start: new Date('October 26, 2018'),
-        end: new Date('October 27, 2018 10:24:00'),
-        eventUser: "DabvcWn4jiSoVonf6sjkeIIEU0p2",
-      },
-      {
-        title: "Wombats: Practice",
-        start: new Date('October 17, 2018'),
-        end: new Date('October 17, 2018 10:24:00'),
-        eventUser: "DabvcWn4jiSoVonf6sjkeIIEU0p2",
-      },
-      {
-        title: "Bombs: Team Dinner",
-        start: new Date('October 29, 2018'),
-        end: new Date('October 29, 2018 10:24:00'),
-        eventUser: "OCrRIeH9bATA5Tf4GgCdKrnT5wy2",
-      }],
+      // events: [{
+      //   title: "Flint League Tourney",
+      //   start: new Date('October 26, 2018'),
+      //   end: new Date('October 27, 2018 10:24:00'),
+      //   eventUser: "DabvcWn4jiSoVonf6sjkeIIEU0p2",
+      // },
+      // {
+      //   title: "Wombats: Practice",
+      //   start: new Date('October 17, 2018'),
+      //   end: new Date('October 17, 2018 10:24:00'),
+      //   eventUser: "DabvcWn4jiSoVonf6sjkeIIEU0p2",
+      // },
+      // {
+      //   title: "Bombs: Team Dinner",
+      //   start: new Date('October 29, 2018'),
+      //   end: new Date('October 29, 2018 10:24:00'),
+      //   eventUser: "OCrRIeH9bATA5Tf4GgCdKrnT5wy2",
+      // }],
       user: null,
       currentUser: {
         username: '',
@@ -72,7 +72,9 @@ class App extends Component {
         photoUrl: '',
         userId: '',
         role: ''
-      }
+      },
+      events: [],
+      eventsRendered: false
     };
   }
 
@@ -80,6 +82,7 @@ class App extends Component {
     firebase.database().ref('events').on('value',(snapshot) => {
       let events = snapshot.val();
       this.setState({events:events});
+      this.setState({eventsRendered: true});
       console.log(this.state.events);
     });
     // const dataBase = firebase.database().ref('data');
@@ -109,9 +112,6 @@ class App extends Component {
         // });
       }
     });
-    // sessionStorage.setItem('sessionData', "test again");
-    let cachedData = sessionStorage.getItem('sessionData');
-    console.log(cachedData);
   }
 
   componentWillMount() {
@@ -413,7 +413,7 @@ class App extends Component {
             username: user.displayName,
             email: user.email,
             role: role,
-            photoUrl: user.photoUrl,
+            photoUrl: "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
             userId: user.uid
         }
       });
@@ -466,6 +466,10 @@ class App extends Component {
 
   render() {
     console.log(this.props);
+    sessionStorage.setItem('sessionData', JSON.stringify(this.props.stats));
+    let cachedData = JSON.parse(sessionStorage.getItem('sessionData'));
+
+    console.log(cachedData);
 
     return (
       <BrowserRouter>

@@ -32,7 +32,12 @@ class MyLeagues extends React.Component {
 
     getMyLeagues() {
       if(this.state.rendered === false) {
-        let currentUserLeagues = this.props.currentUser.userLeagues;
+        let currentUserLeagues;
+        if (this.props.currentUser.role === "admin") {
+          currentUserLeagues = this.props.stats.leagues;
+        } else {
+          currentUserLeagues = this.props.currentUser.userLeagues;
+        }
         console.log(this.props.stats.leagues);
         let matchedLeagues = [];
         if(currentUserLeagues) {
@@ -53,7 +58,11 @@ class MyLeagues extends React.Component {
 
       if(this.state.matchedLeagues === "") {
         return (
-          <div>Loading...</div>
+          <ul className="panel__list">
+            <li className="panel__list__item">
+              <div className="panel__list__item__title">Loading...</div>
+            </li>
+          </ul>
         )
       } else {
         let leagueIndex;

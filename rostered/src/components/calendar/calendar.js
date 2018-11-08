@@ -16,7 +16,7 @@ class Calendar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      events: this.props.events,
+      events: "",
       myEvents: "",
       createPopup: "",
       currentUser: this.props.currentUser,
@@ -26,29 +26,41 @@ class Calendar extends React.Component {
         end: "",
         eventUser: this.props.user.uid
       },
+      rendered: false
     };
   }
 
-  componentWillMount() {
-    this.setState({
-      newEvent: {
-        title: "",
-        start: "",
-        end: "",
-        eventUser: this.props.user.uid
-      }
-    });
-    this.setState({events: this.props.events});
+  componentDidUpdate() {
+    // this.getEvents();
+  }
 
-    let myEvents = [];
-    let events = this.state.events;
-    events.map((event, i) => {
-      if (this.props.user.uid === event.eventUser) {
-        myEvents.push(event);
-      }
-    });
-    console.log(myEvents);
-    this.setState({myEvents: myEvents});
+  componentDidMount() {
+    // this.getEvents();
+  }
+
+  getEvents() {
+    if(this.state.rendered === false) {
+      this.setState({
+        newEvent: {
+          title: "",
+          start: "",
+          end: "",
+          eventUser: this.props.user.uid
+        }
+      });
+      this.setState({events: this.props.events});
+
+      let myEvents = [];
+      let events = this.props.events;
+      events.map((event, i) => {
+        if (this.props.user.uid === event.eventUser) {
+          myEvents.push(event);
+        }
+      });
+      console.log(myEvents);
+      this.setState({myEvents: myEvents});
+      this.setState({rendered: true});
+    }
   }
 
   getEventData(title) {
@@ -57,13 +69,13 @@ class Calendar extends React.Component {
     this.setState({
       newEvent: newEvent
     });
-    let events = this.state.events;
-    let myEvents = this.state.myEvents;
+    let events = this.props.events;
+    // let myEvents = this.state.myEvents;
     events.push(this.state.newEvent);
-    myEvents.push(this.state.newEvent);
-    this.setState({
-      myEvents: myEvents
-    });
+    // myEvents.push(this.state.newEvent);
+    // this.setState({
+    //   myEvents: myEvents
+    // });
     console.log(events);
     this.props.setEvents(events);
     this.setState({
@@ -107,21 +119,34 @@ class Calendar extends React.Component {
 
   render () {
     let allViews = Object.keys(BigCalendar.Views).map(k => BigCalendar.Views[k]);
-    let events = this.state.myEvents;
-
-    return (
-        <div className="calendar-container">
-          {this.state.createPopup}
-          <BigCalendar className="calendar"
-            style={{height: '420px'}}
-            selectable={true}
-            popup={true}
-            events={events}
-            onSelectSlot={(slotInfo) => this.showCreatePopup(slotInfo)}
-            onSelectEvent={(event, e) => this.logEvent(event, e)}
-          />
-        </div>
-    );
+    // let events = this.state.myEvents;
+    let events = this.props.events;
+    // this.setState({events: events});
+    let myEvents = [];
+    events.map((event, i) => {
+      if (this.props.user.uid === event.eventUser) {
+        myEvents.push(event);
+      }
+    });
+    if (this.props.events === "") {
+      return (
+        <div className="loading">Loading</div>
+      );
+    } else {
+      return (
+          <div className="calendar-container">
+            {this.state.createPopup}
+            <BigCalendar className="calendar"
+              style={{height: '420px'}}
+              selectable={true}
+              popup={true}
+              events={events}
+              onSelectSlot={(slotInfo) => this.showCreatePopup(slotInfo)}
+              onSelectEvent={(event, e) => this.logEvent(event, e)}
+            />
+          </div>
+      );
+    }
   }
 }
 

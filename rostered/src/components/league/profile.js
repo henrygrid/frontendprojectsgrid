@@ -35,7 +35,13 @@ class LeagueProfile extends React.Component {
           isEditing: !this.state.isEditing
         });
         let stats = this.props.stats;
-        let id = this.props.location.state.leagueIndex;
+        let id;
+        if(this.props.location.state) {
+          id = this.props.location.state.leagueIndex;
+          sessionStorage.setItem('currentLeagueId', JSON.stringify(this.props.location.state.leagueIndex));
+        } else {
+          id = sessionStorage.getItem('currentLeagueId');
+        }
         stats.leagues[id].name = name;
         stats.leagues[id].createdDate = date;
         console.log(stats.leagues[id]);
@@ -48,16 +54,33 @@ class LeagueProfile extends React.Component {
         //   isEditing: !this.state.isEditing
         // });
         let stats = this.props.stats;
-        let id = this.props.location.state.leagueIndex;
+        let id;
+        if(this.props.location.state) {
+          id = this.props.location.state.leagueIndex;
+          sessionStorage.setItem('currentLeagueId', JSON.stringify(this.props.location.state.leagueIndex));
+        } else {
+          id = sessionStorage.getItem('currentLeagueId');
+        }
         stats.leagues[id].teams = teams;
         console.log(stats.leagues[id]);
         this.props.onStatChange(stats);
       }
 
       render () {
-        let id = this.props.location.state.leagueIndex;
-        console.log(this.props.location);
+        // let id = this.props.location.state.leagueIndex;
+        console.log();
+        let id;
+        if(this.props.location.state) {
+          id = this.props.location.state.leagueIndex;
+          sessionStorage.setItem('currentLeagueId', JSON.stringify(this.props.location.state.leagueIndex));
+          console.log(id, "regular");
+        } else {
+          id = sessionStorage.getItem('currentLeagueId');
+          console.log(id, "session");
+        }
+        console.log(id);
         let league = this.props.stats.leagues[id];
+        console.log(league);
         let view;
 
         if (!this.state.isEditing) {
