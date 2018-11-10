@@ -71,8 +71,8 @@ class LeagueSetup extends React.Component {
         <h1 className="login__modal__header">League Admin Setup</h1>
         <form className="login__modal__login-form">
           <label className="login__modal__login-form__label">Are you starting a new league or joining an existing league?</label>
-          <Link exact to="/leagues/add"><input id="newLeague" className="login__modal__login-form__button" type="submit" value="Starting a new League" /></Link>
-          <Link exact to="/leagues/add"><input id="joinLeague" className="login__modal__login-form__button" type="submit" value="Joining a current League" /></Link>
+          <Link exact to="/leagueadd"><input id="newLeague" className="login__modal__login-form__button" type="submit" value="Starting a new League" /></Link>
+          <Link exact to="/leaguesearch"><input id="joinLeague" className="login__modal__login-form__button" type="submit" value="Joining a current League" /></Link>
         </form>
       </div>
     );

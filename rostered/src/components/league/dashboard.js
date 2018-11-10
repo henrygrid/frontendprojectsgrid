@@ -36,7 +36,7 @@ class LeagueDashboardTable extends React.Component {
 
   render() {
     let myLeagues = [];
-    if (this.props.currentUser.role === "leagueAdmin" || this.props.currentUser.role === "coach" || this.props.currentUser.role === "player") {
+    if (this.props.currentUser.role === "league-admin" || this.props.currentUser.role === "coach" || this.props.currentUser.role === "player") {
       this.props.currentUser.userLeagues.map((userLeague, i) => {
         this.props.stats.leagues.map((league,i) => {
           if (userLeague.leagueId === league.leagueId) {

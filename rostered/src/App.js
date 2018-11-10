@@ -18,6 +18,8 @@ import TeamDashboard from './components/team/dashboard.js';
 import PlayerDashboard from './components/player/dashboard.js';
 import LoginForm from './components/login/loginform.js';
 import SignupForm from './components/login/signupform.js';
+import LeagueSetup from './components/login/leaguesetup.js';
+import LeagueAdd from './components/login/leagueadd.js';
 import ResetPasswordEmail from './components/login/resetpasswordemail.js';
 import ResetPasswordConfirm from './components/login/resetpasswordconfirm.js';
 import UserProfile from './components/user/profile.js';
@@ -250,6 +252,7 @@ class App extends Component {
         let users = snapshot.val();
         users.map((userData, i) => {
           if(userData.userId === this.state.user.uid) {
+            console.log(userData);
             this.setState({currentUser: userData});
           }
         });
@@ -276,6 +279,7 @@ class App extends Component {
         this.setState({
           user: null
         });
+        this.setState({userData: ""});
       }).catch((error) => {
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -377,21 +381,25 @@ class App extends Component {
     firebase.database().ref('events').set(events);
   }
 
-  addUser(email, username, role, password1, password2) {
-    auth.createUserWithEmailAndPassword(email, password2).
+  getGeneralUserInfo(email, name, username, role) {
+    this.setState({
+      userData: {
+          username: username,
+          email: email,
+          name: name,
+          role: role,
+          photoUrl: "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
+          userId: "",
+          userLeagues: [],
+          userTeams: []
+      }
+    });
+  }
+
+  addUser(password, creating, stats, leagueName, leagueId, teamName, teamId, leagueIndex, teamIndex) {
+    console.log({password, creating, stats, leagueName, leagueId});
+    auth.createUserWithEmailAndPassword(this.state.userData.email, password).
     then((result) => {
-      // var actionCodeSettings = {
-      //   url: 'https://www.example.com/cart?email=user@example.com&cartId=123',
-      //   iOS: {
-      //     bundleId: 'com.example.ios'
-      //   },
-      //   android: {
-      //     packageName: 'com.example.android',
-      //     installApp: true,
-      //     minimumVersion: '12'
-      //   },
-      //   handleCodeInApp: true
-      // };
       firebase.auth().currentUser.sendEmailVerification()
         .then(function() {
           console.log("Verification Email Sent")
@@ -400,28 +408,65 @@ class App extends Component {
           console.log(error);
         });
       firebase.auth().currentUser.updateProfile({
-          displayName: username
+          displayName: this.state.userData.username
         }).then(function(){
           console.log("User successfully created");
         }).catch(function(error) {
           console.log(error);
         });
       const user = result.user;
+      console.log(user);
       this.setState({user});
       this.setState({
         userData: {
             username: user.displayName,
             email: user.email,
-            role: role,
+            role: this.state.userData.role,
             photoUrl: "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
-            userId: user.uid
+            userId: user.uid,
+            userLeagues: [
+              {
+                leagueName: leagueName,
+                leagueId: leagueId
+              }
+            ],
+            userTeams: [
+              teamName: teamName,
+              teamId: teamId
+            ]
         }
       });
+      if(creating) {
+        console.log(stats.leagues[stats.leagues.length - 1]);
+        stats.leagues[stats.leagues.length - 1].leagueAdmin = {
+          id: user.uid,
+          email: user.email
+        };
+        console.log(stats);
+        this.onStatChange(stats);
+        this.setState({currentUser: this.state.userData});
+      } else {
+        stats.leagues[leagueIndex].teams[teamIndex].coach = {
+          id: user.uid,
+          email: user.email
+        };
+        this.onStatChange(stats);
+      }
+      firebase.database().ref('users').once('value',(snapshot) => {
+        let users = snapshot.val();
+        users.push(this.state.userData);
+        firebase.database().ref('users').set(users);
+      });
+
     }).catch((error) => {
       var errorCode = error.code;
       var errorMessage = error.message;
       console.log(errorCode + " " + errorMessage);
     });
+  }
+
+  handleSignupLeagueCreation() {
+
   }
 
   onUpdateUser(currentUser) {
@@ -517,7 +562,9 @@ class App extends Component {
                   transitionAppearTimeout={500}>
                   <Switch key={location.key} location={location}>
                     <Route exact path="/" render={ () => <LoginForm user={this.state.user} handleLogin={(email, password) => this.login(email, password) }/>} />
-                    <Route path="/signup" render={() => <SignupForm handleSignup={(email, username, role, password1, password2) => this.addUser(email, username, role, password1, password2) } />} />
+                    <Route path="/signup" render={({match}) => <SignupForm match={match} handleSignup={(email, name, username, role) => this.getGeneralUserInfo(email, name, username, role) } />} />
+                    <Route path="/leaguesetup" render={({match}) => <LeagueSetup match={match} />} />
+                    <Route path="/leagueadd" render={({match}) => <LeagueAdd match={match} stats={this.props.stats} handleSignup={(password, creating, stats, leagueName, leagueId, teamName, teamId, leagueIndex, teamIndex) => this.addUser(password, creating, stats, leagueName, leagueId, teamName, teamId, leagueIndex, teamIndex) }/>} />
                     <Route path="/resetpassword" render={() => <ResetPasswordEmail />} />
                     <Route path="/resetconfirm" render={() => <ResetPasswordConfirm />} />
                   </Switch>
