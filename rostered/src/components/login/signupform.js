@@ -69,7 +69,7 @@ class SignupForm extends React.Component {
   signUp(e) {
     e.preventDefault();
     // if(this.state.password1 === this.state.password2) {
-      this.props.handleSignup(this.state.email, this.state.name, this.state.username, this.state.role);
+      this.props.handleSignup(this.state.email, this.state.name, this.state.username);
       switch (this.state.role) {
         case "player":
           this.props.history.push('/leaguesetup');
@@ -98,12 +98,12 @@ class SignupForm extends React.Component {
           <label className="login__modal__login-form__label">Username</label>
           <input id="username" onChange={(e) => this.getUsername(e)} className="login__modal__login-form__input" type="text" />
           <label className="login__modal__login-form__label">Which best describes your role in the league?</label>
-          <select id="role" onChange={(e) => this.getRole(e)} className="login__modal__login-form__input">
+          {/* <select id="role" onChange={(e) => this.getRole(e)} className="login__modal__login-form__input">
             <option value="player">Player</option>
             <option value="coach">Coach</option>
             <option value="league-admin">League Administrator</option>
           </select>
-          {/* <label className="login__modal__login-form__label">Password</label>
+           <label className="login__modal__login-form__label">Password</label>
           <input id="password1" onChange={(e) => this.getPassword1(e)} className="login__modal__login-form__input" type="password" />
           <label className="login__modal__login-form__label">Retype Password</label>
           <input id="password2" onChange={(e) => this.getPassword2(e)} className="login__modal__login-form__input" type="password" /> */}

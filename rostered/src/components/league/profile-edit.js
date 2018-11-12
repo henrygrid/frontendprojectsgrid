@@ -2,12 +2,19 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import $ from 'jquery';
 import Header from '../header.js';
+import ImageUpload from '../imageUpload.js';
 import {
   Route,
   Link
 } from 'react-router-dom';
 
 class LeagueProfileEdit extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      photoUrl: ""
+    };
+  }
 
   showAdd (e) {
     e.preventDefault();
@@ -80,11 +87,16 @@ class LeagueProfileEdit extends React.Component {
 
   }
 
+  getPhotoUrl(url) {
+    this.setState({photoUrl: url});
+  }
+
   onStatChange (e) {
     let title = document.getElementById('league-name').value;
     let urlTitle = title.replace(/\s/g, '');
     let createdDate = document.getElementById('league-created-date').value;
-    this.props.onClick(e, title, createdDate);
+    let photoUrl = this.state.photoUrl;
+    this.props.onClick(e, title, createdDate, photoUrl);
     this.props.history.push(`${urlTitle}`);
   }
 
@@ -107,9 +119,7 @@ class LeagueProfileEdit extends React.Component {
           <div className="profile">
             <div className="profile__left">
               <h1 className="profile__left__title">{league.name}</h1>
-              <div className="profile__left__image">
-                <img src="http://lorempixel.com/200/200/sports" />
-              </div>
+              <ImageUpload onClick={(url) => this.getPhotoUrl(url)} url={league.photoUrl} currentUser={this.props.currentUser} />
             </div>
             <div className="profile__right">
               <div className="profile__right__links">

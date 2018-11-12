@@ -102,6 +102,7 @@ class LeagueAdd extends React.Component {
       location: this.state.location,
       division: this.state.division,
       leagueAdmin: "",
+      photoUrl: "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
       sport: this.state.sport,
       age: this.state.age,
       gender: this.state.gender,
@@ -109,6 +110,7 @@ class LeagueAdd extends React.Component {
       teams:  [{
           name: "Sample Team",
           id: lid(),
+          photoUrl: "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
           coach: {
             name: "",
             id: ""

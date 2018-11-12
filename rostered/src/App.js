@@ -381,13 +381,13 @@ class App extends Component {
     firebase.database().ref('events').set(events);
   }
 
-  getGeneralUserInfo(email, name, username, role) {
+  getGeneralUserInfo(email, name, username) {
     this.setState({
       userData: {
           username: username,
           email: email,
           name: name,
-          role: role,
+          role: "league-admin",
           photoUrl: "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
           userId: "",
           userLeagues: [],
@@ -511,10 +511,17 @@ class App extends Component {
 
   render() {
     console.log(this.props);
-    sessionStorage.setItem('sessionData', JSON.stringify(this.props.stats));
-    let cachedData = JSON.parse(sessionStorage.getItem('sessionData'));
 
-    console.log(cachedData);
+    let stats;
+    let currentUser;
+    if (this.state.currentUser.email !== '') {
+      currentUser = this.state.currentUser;
+      sessionStorage.setItem('sessionUser', JSON.stringify(currentUser));
+      console.log(currentUser);
+    } else {
+      currentUser = JSON.parse(sessionStorage.getItem('sessionUser'));
+      console.log(currentUser);
+    }
 
     return (
       <BrowserRouter>
@@ -523,7 +530,7 @@ class App extends Component {
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossOrigin="anonymous" />
           {this.state.user ?
             <div className="container">
-              <Header currentUser={this.state.currentUser} handleLogout={(e) => this.logout(e)}/>
+              <Header currentUser={currentUser} handleLogout={(e) => this.logout(e)}/>
               <section className="content">
                 <div className="search__wrapper">
                   <input type="text" className="search__input" onKeyDown={(e) => this.searchData(e)} />
@@ -539,12 +546,12 @@ class App extends Component {
                     transitionAppear={true}
                     transitionAppearTimeout={500}>
                     <Switch key={location.key} location={location}>
-                      <Route path="/home" render={ () => <Dashboard currentUser={this.state.currentUser} stats={this.props.stats} scorers={this.state.scorers} onStatChange={(stats) => this.onStatChange(stats)} handleLogout={(e) => this.logout(e) } />} />
-                      <Route path="/leagues" render={ ({match}) => <LeagueDashboard key="/leagues" currentUser={this.state.currentUser} stats={this.props.stats} match={match} onStatChange={(stats) => this.onStatChange(stats)} />} />
-                      <Route path="/teams" render={ ({match}) => <TeamDashboard currentUser={this.state.currentUser} stats={this.props.stats} match={match} onStatChange={(stats) => this.onStatChange(stats)} />} />
-                      <Route path="/players" render={ () => <PlayerDashboard currentUser={this.state.currentUser} stats={this.props.stats} onStatChange={(stats) => this.onStatChange(stats)} />} />
-                      <Route path="/schedule" render={ ({match}) => <CalendarContainer user={this.state.user} currentUser={this.state.currentUser} user={this.state.user} stats={this.props.stats} events={this.state.events} setEvents={(events) => this.setEvents(events)} match={match} onStatChange={(stats) => this.onStatChange(stats)} />} />
-                      <Route path="/user/profile" render={ () => <UserProfile currentUser={this.state.currentUser} user={this.state.user} stats={this.props.stats} onUpdateUser={(currentUser) => this.onUpdateUser(currentUser)} />} />
+                      <Route path="/home" render={ () => <Dashboard currentUser={currentUser} stats={this.props.stats} scorers={this.state.scorers} onStatChange={(stats) => this.onStatChange(stats)} handleLogout={(e) => this.logout(e) } />} />
+                      <Route path="/leagues" render={ ({match}) => <LeagueDashboard key="/leagues" currentUser={currentUser} stats={this.props.stats} match={match} onStatChange={(stats) => this.onStatChange(stats)} />} />
+                      <Route path="/teams" render={ ({match}) => <TeamDashboard currentUser={currentUser} stats={this.props.stats} match={match} onStatChange={(stats) => this.onStatChange(stats)} />} />
+                      <Route path="/players" render={ () => <PlayerDashboard currentUser={currentUser} stats={this.props.stats} onStatChange={(stats) => this.onStatChange(stats)} />} />
+                      <Route path="/schedule" render={ ({match}) => <CalendarContainer user={this.state.user} currentUser={currentUser} user={this.state.user} stats={this.props.stats} events={this.state.events} setEvents={(events) => this.setEvents(events)} match={match} onStatChange={(stats) => this.onStatChange(stats)} />} />
+                      <Route path="/user/profile" render={ () => <UserProfile currentUser={currentUser} user={this.state.user} stats={this.props.stats} onUpdateUser={(currentUser) => this.onUpdateUser(currentUser)} />} />
                     </Switch>
                   </ReactCSSTransitionGroup>
                 </section>
@@ -562,7 +569,7 @@ class App extends Component {
                   transitionAppearTimeout={500}>
                   <Switch key={location.key} location={location}>
                     <Route exact path="/" render={ () => <LoginForm user={this.state.user} handleLogin={(email, password) => this.login(email, password) }/>} />
-                    <Route path="/signup" render={({match}) => <SignupForm match={match} handleSignup={(email, name, username, role) => this.getGeneralUserInfo(email, name, username, role) } />} />
+                    <Route path="/signup" render={({match}) => <SignupForm match={match} handleSignup={(email, name, username) => this.getGeneralUserInfo(email, name, username) } />} />
                     <Route path="/leaguesetup" render={({match}) => <LeagueSetup match={match} />} />
                     <Route path="/leagueadd" render={({match}) => <LeagueAdd match={match} stats={this.props.stats} handleSignup={(password, creating, stats, leagueName, leagueId, teamName, teamId, leagueIndex, teamIndex) => this.addUser(password, creating, stats, leagueName, leagueId, teamName, teamId, leagueIndex, teamIndex) }/>} />
                     <Route path="/resetpassword" render={() => <ResetPasswordEmail />} />

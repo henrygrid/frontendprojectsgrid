@@ -67,15 +67,17 @@ class LeagueDashboardTable extends React.Component {
                   }
                 }} className="panel__list__item__title"><i className={league.icon} aria-hidden="true"></i> {league.name}</Link></li>;
               })
-            : myLeagues.map((league, i) => {
-                let name = league.name.replace(/\s/g, '');
-                return <li className="panel__list__item"><Link to={{
-                  pathname: `${this.props.match.url}/profile/${name}`,
-                  state: {
-                    leagueIndex: i
-                  }
-                }} className="panel__list__item__title"><i className={league.icon} aria-hidden="true"></i> {league.name}</Link></li>;
-              })
+            : myLeagues.length === 0 ?
+                <li className="panel__list__item"><div className="panel__list__item__title">You don't have any leagues yet. Hit the plus icon on the top right to create one.</div></li>
+                : myLeagues.map((league, i) => {
+                  let name = league.name.replace(/\s/g, '');
+                  return <li className="panel__list__item"><Link to={{
+                    pathname: `${this.props.match.url}/profile/${name}`,
+                    state: {
+                      leagueIndex: i
+                    }
+                  }} className="panel__list__item__title"><i className={league.icon} aria-hidden="true"></i> {league.name}</Link></li>;
+                })
 
           }
           </ul>

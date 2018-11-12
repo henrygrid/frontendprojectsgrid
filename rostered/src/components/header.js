@@ -40,7 +40,7 @@ class Header extends React.Component {
             <li className="App-nav__list__item"><NavLink exact to="/leagues" className="App-nav__list__item__link">Leagues</NavLink></li>
             <li className="App-nav__list__item"><NavLink exact to="/teams" className="App-nav__list__item__link">Teams</NavLink></li>
             {
-              this.props.currentUser.role === "admin" || this.props.currentUser.role === "leagueAdmin" || this.props.currentUser.role === "coach" ?
+              this.props.currentUser.role === "admin" || this.props.currentUser.role === "league-admin" || this.props.currentUser.role === "coach" ?
                 <li className="App-nav__list__item"><NavLink exact to="/players" className="App-nav__list__item__link">Players</NavLink></li>
               : ""
             }
