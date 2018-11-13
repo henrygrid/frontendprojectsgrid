@@ -100,7 +100,7 @@ class LeagueStandings extends React.Component {
                           leagueIndex: leagueIndex,
                           teamIndex: team.originalIndex
                         }
-                      }}>{team.rank} {team.name}</Link></li>
+                      }}>{team.rank}.  {team.name}</Link></li>
                   })
                 : <li className="panel__list__item"><p className="panel__list__item__title">No teams tracked</p></li>
               }

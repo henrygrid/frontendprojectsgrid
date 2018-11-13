@@ -58,9 +58,11 @@ class LeagueProfileEdit extends React.Component {
     let newTeam = document.getElementById("newTeam").value;
     let team = {
       name: newTeam,
+      photoUrl: "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
       id: lid(),
       players: [{
         name: "Sample Player",
+        photoUrl: "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
         id: lid()
       }]
     };

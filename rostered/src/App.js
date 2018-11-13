@@ -32,7 +32,9 @@ import {
   Route,
   Redirect,
   Switch,
-  withRouter
+  withRouter,
+  NavLink,
+  Link
 } from 'react-router-dom';
 
 import $ from 'jquery';
@@ -509,6 +511,20 @@ class App extends Component {
     this.setState({events:newEvents});
   }
 
+  openMobileNav(e) {
+    e.preventDefault();
+    $('.Mobile-nav').addClass('visible');
+  }
+
+  closeMobileNav(e) {
+    e.preventDefault();
+    $('.Mobile-nav').removeClass('visible');
+  }
+
+  hideMobileNav(e) {
+    $('.Mobile-nav').removeClass('visible');
+  }
+
   render() {
     console.log(this.props);
 
@@ -530,7 +546,7 @@ class App extends Component {
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossOrigin="anonymous" />
           {this.state.user ?
             <div className="container">
-              <Header currentUser={currentUser} handleLogout={(e) => this.logout(e)}/>
+              <Header currentUser={currentUser} openMobileNav={(e) => this.openMobileNav(e) } handleLogout={(e) => this.logout(e)}/>
               <section className="content">
                 <div className="search__wrapper">
                   <input type="text" className="search__input" onKeyDown={(e) => this.searchData(e)} />
@@ -579,7 +595,22 @@ class App extends Component {
               </div>
             </div>
           }
-
+          <nav className="Mobile-nav">
+            <a href="" className="Mobile-nav--close" onClick={(e) => this.closeMobileNav(e) }>
+              <i className="fa fa-times"></i>
+            </a>
+            <ul className="Mobile-nav__list">
+              <li className="Mobile-nav__list__item"><NavLink exact to="/home" onClick={(e) => this.hideMobileNav(e) } className="Mobile-nav__list__item__link">Home</NavLink></li>
+              <li className="Mobile-nav__list__item"><NavLink exact to="/leagues" onClick={(e) => this.hideMobileNav(e) } className="Mobile-nav__list__item__link">Leagues</NavLink></li>
+              <li className="Mobile-nav__list__item"><NavLink exact to="/teams" onClick={(e) => this.hideMobileNav(e) } className="Mobile-nav__list__item__link">Teams</NavLink></li>
+              {
+                this.state.currentUser.role === "admin" || this.state.currentUser.role === "league-admin" || this.state.currentUser.role === "coach" ?
+                  <li className="Mobile-nav__list__item"><NavLink exact to="/players" onClick={(e) => this.hideMobileNav(e) } className="Mobile-nav__list__item__link">Players</NavLink></li>
+                : ""
+              }
+              <li className="Mobile-nav__list__item"><NavLink exact to="/schedule" onClick={(e) => this.hideMobileNav(e) } className="Mobile-nav__list__item__link">Schedule</NavLink></li>
+            </ul>
+          </nav>
         </div>
       )}/>
       </BrowserRouter>

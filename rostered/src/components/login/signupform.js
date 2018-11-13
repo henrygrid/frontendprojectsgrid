@@ -97,8 +97,8 @@ class SignupForm extends React.Component {
           <input id="name" onChange={(e) => this.getName(e)} className="login__modal__login-form__input" type="text" />
           <label className="login__modal__login-form__label">Username</label>
           <input id="username" onChange={(e) => this.getUsername(e)} className="login__modal__login-form__input" type="text" />
-          <label className="login__modal__login-form__label">Which best describes your role in the league?</label>
-          {/* <select id="role" onChange={(e) => this.getRole(e)} className="login__modal__login-form__input">
+          {/* <label className="login__modal__login-form__label">Which best describes your role in the league?</label>
+          <select id="role" onChange={(e) => this.getRole(e)} className="login__modal__login-form__input">
             <option value="player">Player</option>
             <option value="coach">Coach</option>
             <option value="league-admin">League Administrator</option>

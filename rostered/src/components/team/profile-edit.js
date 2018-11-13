@@ -40,7 +40,9 @@ class TeamProfileEdit extends React.Component {
     let name = this.props.team.name.replace(/\s/g, '');
     let leagueName = this.props.leagueName;
     let player = {
-      name: newPlayer
+      name: newPlayer,
+      score: "",
+      photoUrl: "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
     };
     players.push(player);
     this.props.handlePlayerEdits(e, players);

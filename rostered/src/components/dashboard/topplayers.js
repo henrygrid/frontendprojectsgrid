@@ -110,7 +110,7 @@ class TopPlayers extends React.Component {
                           teamIndex: player.teamIndex,
                           playerIndex: player.originalIndex
                         }
-                      }}>{i + 1} {player.name}</Link></li>
+                      }}>{i + 1}.  {player.name}</Link></li>
                   })
                 : <li className="panel__list__item"><p className="panel__list__item__title">No teams tracked</p></li>
               }
