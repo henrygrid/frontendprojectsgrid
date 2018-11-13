@@ -36,7 +36,7 @@ class LeagueDashboardTable extends React.Component {
 
   render() {
     let myLeagues = [];
-    if (this.props.currentUser.role === "league-admin" || this.props.currentUser.role === "coach" || this.props.currentUser.role === "player") {
+    if (this.props.currentUser.role === "coach" || this.props.currentUser.role === "player") {
       this.props.currentUser.userLeagues.map((userLeague, i) => {
         this.props.stats.leagues.map((league,i) => {
           if (userLeague.leagueId === league.leagueId) {
@@ -45,6 +45,7 @@ class LeagueDashboardTable extends React.Component {
         })
       })
     }
+    console.log(myLeagues);
 
     return (
       <div className="panel panel__full-width">
@@ -57,7 +58,7 @@ class LeagueDashboardTable extends React.Component {
           <ul className="panel__list">
           {
             //Admin view all leagues
-            this.props.currentUser.role === "admin" ?
+            this.props.currentUser.role === "admin" || this.props.currentUser.role === "league-admin" ?
               this.props.stats.leagues.map((league, i) => {
                 let name = league.name.replace(/\s/g, '');
                 return <li className="panel__list__item"><Link to={{
