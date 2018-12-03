@@ -433,8 +433,10 @@ class App extends Component {
               }
             ],
             userTeams: [
-              teamName: teamName,
-              teamId: teamId
+              {
+                teamName: teamName,
+                teamId: teamId
+              }
             ]
         }
       });

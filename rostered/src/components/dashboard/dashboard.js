@@ -136,3 +136,5 @@ Dashboard.propTypes = {
 
 
 export default withRouter(Dashboard);
+
+export { Dashboard };

@@ -39,7 +39,6 @@ class LeagueStandings extends React.Component {
         } else {
           currentUserLeagues = this.props.currentUser.userLeagues;
         }
-        console.log(this.props.stats.leagues);
         let matchedLeagues = [];
         if(currentUserLeagues) {
           this.props.stats.leagues.map((dataLeague) => {
@@ -53,7 +52,6 @@ class LeagueStandings extends React.Component {
           teams.map((team, i) => {
             team.originalIndex = i;
           });
-          console.log(teams);
           this.setState({matchedLeagues: matchedLeagues});
           this.setState({teams: teams});
           this.setState({rendered: true});
@@ -85,7 +83,6 @@ class LeagueStandings extends React.Component {
         let sortedTeams = this.state.teams.sort((a, b) => {
           return a.rank - b.rank;
         });
-        console.log(sortedTeams);
 
         return (
             <ul className="panel__list">
@@ -94,7 +91,7 @@ class LeagueStandings extends React.Component {
                 this.state.teams.length !== 0 ?
                   sortedTeams.map((team, i) => {
                     let teamName = team.name.replace(/\s/g, '');
-                    return <li className="panel__list__item"><Link className="panel__list__item__title" to={{
+                    return <li className="panel__list__item" key={team.id}><Link className="panel__list__item__title" to={{
                         pathname: `/teams/profile/${leagueName}/${teamName}`,
                         state: {
                           leagueIndex: leagueIndex,

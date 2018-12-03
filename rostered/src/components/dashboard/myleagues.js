@@ -38,7 +38,6 @@ class MyLeagues extends React.Component {
         } else {
           currentUserLeagues = this.props.currentUser.userLeagues;
         }
-        console.log(this.props.stats.leagues);
         let matchedLeagues = [];
         if(currentUserLeagues) {
           this.props.stats.leagues.map((dataLeague) => {
@@ -80,7 +79,7 @@ class MyLeagues extends React.Component {
                 this.state.matchedLeagues.length !== 0 ?
                 this.state.matchedLeagues.map((league,i) => {
                   let name = league.name.replace(/\s/g, '');
-                  return <li className="panel__list__item"><Link className="panel__list__item__title" to={{
+                  return <li className="panel__list__item" key={league.leagueId}><Link className="panel__list__item__title" to={{
                       pathname: `/leagues/profile/${name}`,
                       state: {
                         leagueIndex: leagueIndex
