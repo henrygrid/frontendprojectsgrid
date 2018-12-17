@@ -98,8 +98,10 @@ class App extends Component {
       console.log(user);
       if (user) {
         this.setState({ user });
+        console.log(this.state.user);
         firebase.database().ref('users').on('value',(snapshot) => {
           let users = snapshot.val();
+          console.log(users);
           users.map((userData, i) => {
             if(userData.userId === this.state.user.uid) {
               this.setState({currentUser: userData});

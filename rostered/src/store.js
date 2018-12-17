@@ -64,7 +64,6 @@ function getData() {
 
 getData();
 
-console.log(stats);
 
 let initialState = {
     leagues: [
@@ -81,7 +80,6 @@ let initialState = {
 function Reducer (state = initialState, action) {
  switch (action.type) {
   case GET_STATS:
-    console.log(action.stats);
    return action.stats.stats
   case UPDATE_STATS:
    return action.stats.stats

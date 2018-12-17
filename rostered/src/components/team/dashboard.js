@@ -65,7 +65,7 @@ class TeamDashboardTable extends React.Component {
                   let teamName = team.name.replace(/\s/g, '');
                   let teamId = i;
 
-                  return <li className="panel__list__item"><Link to={{
+                  return <li className="panel__list__item" key={team.id}><Link to={{
                     pathname: `${this.props.match.url}/profile/${leagueName}/${teamName}`,
                     state: {
                       leagueIndex: leagueId,
@@ -85,7 +85,7 @@ class TeamDashboardTable extends React.Component {
                   let teamName = team.name.replace(/\s/g, '');
                   let teamId = i;
 
-                  return <li className="panel__list__item"><Link to={{
+                  return <li className="panel__list__item" key={team.id}><Link to={{
                     pathname: `${this.props.match.url}/profile/${leagueName}/${teamName}`,
                     state: {
                       leagueIndex: leagueId,

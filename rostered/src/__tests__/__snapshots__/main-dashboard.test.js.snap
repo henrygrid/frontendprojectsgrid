@@ -12,7 +12,7 @@ exports[`<Dashboard /> matches the snapshot 1`] = `
         "entries": Array [
           Object {
             "hash": "",
-            "key": "01la4l",
+            "key": "u091j1",
             "pathname": "/",
             "search": "",
             "state": undefined,
@@ -26,7 +26,7 @@ exports[`<Dashboard /> matches the snapshot 1`] = `
         "listen": [Function],
         "location": Object {
           "hash": "",
-          "key": "01la4l",
+          "key": "u091j1",
           "pathname": "/",
           "search": "",
           "state": undefined,
@@ -42,6 +42,7 @@ exports[`<Dashboard /> matches the snapshot 1`] = `
           "email": "juvannameetmymom@gmail.com",
           "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
           "role": "admin",
+          "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
           "userId": "ABC123",
           "userLeagues": Array [
             Object {
@@ -498,6 +499,7 @@ exports[`<Dashboard /> matches the snapshot 1`] = `
               "email": "juvannameetmymom@gmail.com",
               "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
               "role": "admin",
+              "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
               "userId": "ABC123",
               "userLeagues": Array [
                 Object {
@@ -523,7 +525,7 @@ exports[`<Dashboard /> matches the snapshot 1`] = `
               "entries": Array [
                 Object {
                   "hash": "",
-                  "key": "01la4l",
+                  "key": "u091j1",
                   "pathname": "/",
                   "search": "",
                   "state": undefined,
@@ -537,7 +539,7 @@ exports[`<Dashboard /> matches the snapshot 1`] = `
               "listen": [Function],
               "location": Object {
                 "hash": "",
-                "key": "01la4l",
+                "key": "u091j1",
                 "pathname": "/",
                 "search": "",
                 "state": undefined,
@@ -549,7 +551,7 @@ exports[`<Dashboard /> matches the snapshot 1`] = `
           location={
             Object {
               "hash": "",
-              "key": "01la4l",
+              "key": "u091j1",
               "pathname": "/",
               "search": "",
               "state": undefined,
@@ -1010,6 +1012,7 @@ exports[`<Dashboard /> matches the snapshot 1`] = `
                       "email": "juvannameetmymom@gmail.com",
                       "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                       "role": "admin",
+                      "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                       "userId": "ABC123",
                       "userLeagues": Array [
                         Object {
@@ -1466,6 +1469,7 @@ exports[`<Dashboard /> matches the snapshot 1`] = `
                   "email": "juvannameetmymom@gmail.com",
                   "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                   "role": "admin",
+                  "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                   "userId": "ABC123",
                   "userLeagues": Array [
                     Object {
@@ -1937,6 +1941,7 @@ exports[`<Dashboard /> matches the snapshot 1`] = `
                         "email": "juvannameetmymom@gmail.com",
                         "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                         "role": "admin",
+                        "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                         "userId": "ABC123",
                         "userLeagues": Array [
                           Object {
@@ -2453,6 +2458,7 @@ exports[`<Dashboard /> matches the snapshot 1`] = `
                       "email": "juvannameetmymom@gmail.com",
                       "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                       "role": "admin",
+                      "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                       "userId": "ABC123",
                       "userLeagues": Array [
                         Object {
@@ -2909,6 +2915,7 @@ exports[`<Dashboard /> matches the snapshot 1`] = `
                   "email": "juvannameetmymom@gmail.com",
                   "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                   "role": "admin",
+                  "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                   "userId": "ABC123",
                   "userLeagues": Array [
                     Object {
@@ -3380,6 +3387,7 @@ exports[`<Dashboard /> matches the snapshot 1`] = `
                         "email": "juvannameetmymom@gmail.com",
                         "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                         "role": "admin",
+                        "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                         "userId": "ABC123",
                         "userLeagues": Array [
                           Object {
@@ -3930,6 +3938,7 @@ exports[`<Dashboard /> matches the snapshot 1`] = `
                       "email": "juvannameetmymom@gmail.com",
                       "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                       "role": "admin",
+                      "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                       "userId": "ABC123",
                       "userLeagues": Array [
                         Object {
@@ -4386,6 +4395,7 @@ exports[`<Dashboard /> matches the snapshot 1`] = `
                   "email": "juvannameetmymom@gmail.com",
                   "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                   "role": "admin",
+                  "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                   "userId": "ABC123",
                   "userLeagues": Array [
                     Object {
@@ -4857,6 +4867,7 @@ exports[`<Dashboard /> matches the snapshot 1`] = `
                         "email": "juvannameetmymom@gmail.com",
                         "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                         "role": "admin",
+                        "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                         "userId": "ABC123",
                         "userLeagues": Array [
                           Object {
@@ -5596,7 +5607,7 @@ exports[`<Dashboard /> updates via props 1`] = `
         "entries": Array [
           Object {
             "hash": "",
-            "key": "uneypo",
+            "key": "tfg60p",
             "pathname": "/",
             "search": "",
             "state": undefined,
@@ -5610,7 +5621,7 @@ exports[`<Dashboard /> updates via props 1`] = `
         "listen": [Function],
         "location": Object {
           "hash": "",
-          "key": "uneypo",
+          "key": "tfg60p",
           "pathname": "/",
           "search": "",
           "state": undefined,
@@ -5627,6 +5638,7 @@ exports[`<Dashboard /> updates via props 1`] = `
           "email": "juvannameetmymom@gmail.com",
           "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
           "role": "admin",
+          "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
           "userId": "ABC123",
           "userLeagues": Array [
             Object {
@@ -6084,6 +6096,7 @@ exports[`<Dashboard /> updates via props 1`] = `
               "email": "juvannameetmymom@gmail.com",
               "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
               "role": "admin",
+              "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
               "userId": "ABC123",
               "userLeagues": Array [
                 Object {
@@ -6109,7 +6122,7 @@ exports[`<Dashboard /> updates via props 1`] = `
               "entries": Array [
                 Object {
                   "hash": "",
-                  "key": "uneypo",
+                  "key": "tfg60p",
                   "pathname": "/",
                   "search": "",
                   "state": undefined,
@@ -6123,7 +6136,7 @@ exports[`<Dashboard /> updates via props 1`] = `
               "listen": [Function],
               "location": Object {
                 "hash": "",
-                "key": "uneypo",
+                "key": "tfg60p",
                 "pathname": "/",
                 "search": "",
                 "state": undefined,
@@ -6135,7 +6148,7 @@ exports[`<Dashboard /> updates via props 1`] = `
           location={
             Object {
               "hash": "",
-              "key": "uneypo",
+              "key": "tfg60p",
               "pathname": "/",
               "search": "",
               "state": undefined,
@@ -6596,6 +6609,7 @@ exports[`<Dashboard /> updates via props 1`] = `
                       "email": "juvannameetmymom@gmail.com",
                       "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                       "role": "admin",
+                      "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                       "userId": "ABC123",
                       "userLeagues": Array [
                         Object {
@@ -7052,6 +7066,7 @@ exports[`<Dashboard /> updates via props 1`] = `
                   "email": "juvannameetmymom@gmail.com",
                   "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                   "role": "admin",
+                  "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                   "userId": "ABC123",
                   "userLeagues": Array [
                     Object {
@@ -7523,6 +7538,7 @@ exports[`<Dashboard /> updates via props 1`] = `
                         "email": "juvannameetmymom@gmail.com",
                         "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                         "role": "admin",
+                        "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                         "userId": "ABC123",
                         "userLeagues": Array [
                           Object {
@@ -8039,6 +8055,7 @@ exports[`<Dashboard /> updates via props 1`] = `
                       "email": "juvannameetmymom@gmail.com",
                       "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                       "role": "admin",
+                      "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                       "userId": "ABC123",
                       "userLeagues": Array [
                         Object {
@@ -8495,6 +8512,7 @@ exports[`<Dashboard /> updates via props 1`] = `
                   "email": "juvannameetmymom@gmail.com",
                   "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                   "role": "admin",
+                  "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                   "userId": "ABC123",
                   "userLeagues": Array [
                     Object {
@@ -8966,6 +8984,7 @@ exports[`<Dashboard /> updates via props 1`] = `
                         "email": "juvannameetmymom@gmail.com",
                         "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                         "role": "admin",
+                        "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                         "userId": "ABC123",
                         "userLeagues": Array [
                           Object {
@@ -9516,6 +9535,7 @@ exports[`<Dashboard /> updates via props 1`] = `
                       "email": "juvannameetmymom@gmail.com",
                       "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                       "role": "admin",
+                      "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                       "userId": "ABC123",
                       "userLeagues": Array [
                         Object {
@@ -9972,6 +9992,7 @@ exports[`<Dashboard /> updates via props 1`] = `
                   "email": "juvannameetmymom@gmail.com",
                   "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                   "role": "admin",
+                  "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                   "userId": "ABC123",
                   "userLeagues": Array [
                     Object {
@@ -10443,6 +10464,7 @@ exports[`<Dashboard /> updates via props 1`] = `
                         "email": "juvannameetmymom@gmail.com",
                         "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                         "role": "admin",
+                        "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                         "userId": "ABC123",
                         "userLeagues": Array [
                           Object {
@@ -11184,7 +11206,7 @@ exports[`<Dashboard /> updates via props 2`] = `
         "entries": Array [
           Object {
             "hash": "",
-            "key": "uneypo",
+            "key": "tfg60p",
             "pathname": "/",
             "search": "",
             "state": undefined,
@@ -11198,7 +11220,7 @@ exports[`<Dashboard /> updates via props 2`] = `
         "listen": [Function],
         "location": Object {
           "hash": "",
-          "key": "uneypo",
+          "key": "tfg60p",
           "pathname": "/",
           "search": "",
           "state": undefined,
@@ -11215,6 +11237,7 @@ exports[`<Dashboard /> updates via props 2`] = `
           "email": "juvannameetmymom@gmail.com",
           "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
           "role": "admin",
+          "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
           "userId": "ABC123",
           "userLeagues": Array [
             Object {
@@ -11672,6 +11695,7 @@ exports[`<Dashboard /> updates via props 2`] = `
               "email": "juvannameetmymom@gmail.com",
               "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
               "role": "admin",
+              "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
               "userId": "ABC123",
               "userLeagues": Array [
                 Object {
@@ -11697,7 +11721,7 @@ exports[`<Dashboard /> updates via props 2`] = `
               "entries": Array [
                 Object {
                   "hash": "",
-                  "key": "uneypo",
+                  "key": "tfg60p",
                   "pathname": "/",
                   "search": "",
                   "state": undefined,
@@ -11711,7 +11735,7 @@ exports[`<Dashboard /> updates via props 2`] = `
               "listen": [Function],
               "location": Object {
                 "hash": "",
-                "key": "uneypo",
+                "key": "tfg60p",
                 "pathname": "/",
                 "search": "",
                 "state": undefined,
@@ -11723,7 +11747,7 @@ exports[`<Dashboard /> updates via props 2`] = `
           location={
             Object {
               "hash": "",
-              "key": "uneypo",
+              "key": "tfg60p",
               "pathname": "/",
               "search": "",
               "state": undefined,
@@ -12184,6 +12208,7 @@ exports[`<Dashboard /> updates via props 2`] = `
                       "email": "juvannameetmymom@gmail.com",
                       "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                       "role": "admin",
+                      "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                       "userId": "ABC123",
                       "userLeagues": Array [
                         Object {
@@ -12640,6 +12665,7 @@ exports[`<Dashboard /> updates via props 2`] = `
                   "email": "juvannameetmymom@gmail.com",
                   "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                   "role": "admin",
+                  "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                   "userId": "ABC123",
                   "userLeagues": Array [
                     Object {
@@ -13111,6 +13137,7 @@ exports[`<Dashboard /> updates via props 2`] = `
                         "email": "juvannameetmymom@gmail.com",
                         "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                         "role": "admin",
+                        "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                         "userId": "ABC123",
                         "userLeagues": Array [
                           Object {
@@ -13627,6 +13654,7 @@ exports[`<Dashboard /> updates via props 2`] = `
                       "email": "juvannameetmymom@gmail.com",
                       "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                       "role": "admin",
+                      "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                       "userId": "ABC123",
                       "userLeagues": Array [
                         Object {
@@ -14083,6 +14111,7 @@ exports[`<Dashboard /> updates via props 2`] = `
                   "email": "juvannameetmymom@gmail.com",
                   "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                   "role": "admin",
+                  "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                   "userId": "ABC123",
                   "userLeagues": Array [
                     Object {
@@ -14554,6 +14583,7 @@ exports[`<Dashboard /> updates via props 2`] = `
                         "email": "juvannameetmymom@gmail.com",
                         "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                         "role": "admin",
+                        "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                         "userId": "ABC123",
                         "userLeagues": Array [
                           Object {
@@ -15104,6 +15134,7 @@ exports[`<Dashboard /> updates via props 2`] = `
                       "email": "juvannameetmymom@gmail.com",
                       "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                       "role": "admin",
+                      "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                       "userId": "ABC123",
                       "userLeagues": Array [
                         Object {
@@ -15560,6 +15591,7 @@ exports[`<Dashboard /> updates via props 2`] = `
                   "email": "juvannameetmymom@gmail.com",
                   "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                   "role": "admin",
+                  "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                   "userId": "ABC123",
                   "userLeagues": Array [
                     Object {
@@ -16031,6 +16063,7 @@ exports[`<Dashboard /> updates via props 2`] = `
                         "email": "juvannameetmymom@gmail.com",
                         "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
                         "role": "admin",
+                        "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
                         "userId": "ABC123",
                         "userLeagues": Array [
                           Object {

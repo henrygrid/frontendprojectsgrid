@@ -34,28 +34,43 @@ class PlayerDashboardTable extends React.Component {
 
   render() {
     let myPlayers = [];
-    console.log(this.props.currentUser);
     this.props.stats.leagues.map((league, i) => {
         let leagueName = league.name.replace(/\s/g, '');
         let leagueId = i;
 
-        this.props.currentUser.userLeagues.map((userLeague, i) => {
-          if(league.leagueId === userLeague.leagueId) {
-            return league.teams.map((team, i) => {
-              let teamName = team.name.replace(/\s/g, '');
-              let teamId = i;
+        if(this.props.currentUser.role !== "admin") {
+          this.props.currentUser.userLeagues.map((userLeague, i) => {
+            if(league.leagueId === userLeague.leagueId) {
+              return league.teams.map((team, i) => {
+                let teamName = team.name.replace(/\s/g, '');
+                let teamId = i;
 
-              if(team.players) {
-                return team.players.map((player, i) => {
-                  let playerName = player.name.replace(/\s/g, '');
-                  let playerId = i;
-                  myPlayers.push(player);
+                if(team.players) {
+                  return team.players.map((player, i) => {
+                    let playerName = player.name.replace(/\s/g, '');
+                    let playerId = i;
+                    myPlayers.push(player);
 
-                });
-              }
-            });
-          }
-        });
+                  });
+                }
+              });
+            }
+          });
+        } else {
+          return league.teams.map((team, i) => {
+            let teamName = team.name.replace(/\s/g, '');
+            let teamId = i;
+
+            if(team.players) {
+              return team.players.map((player, i) => {
+                let playerName = player.name.replace(/\s/g, '');
+                let playerId = i;
+                myPlayers.push(player);
+
+              });
+            }
+          });
+        }
       });
 
       if(myPlayers.length === 0) {
@@ -91,7 +106,7 @@ class PlayerDashboardTable extends React.Component {
                       let playerName = player.name.replace(/\s/g, '');
                       let playerId = i;
 
-                      return <li className="panel__list__item"><Link to={{
+                      return <li className="panel__list__item" key={player.id}><Link to={{
                         pathname: `${this.props.match.url}/profile/${leagueName}/${teamName}/${playerName}`,
                         state: {
                           leagueIndex: leagueId,

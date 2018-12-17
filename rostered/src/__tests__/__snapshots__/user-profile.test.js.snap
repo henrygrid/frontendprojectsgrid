@@ -1,0 +1,3262 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserProfile /> matches the snapshot 1`] = `
+<MemoryRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "1w11sz",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "1w11sz",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <withRouter(UserProfile)
+      currentUser={
+        Object {
+          "email": "juvannameetmymom@gmail.com",
+          "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
+          "role": "admin",
+          "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
+          "userId": "ABC123",
+          "userLeagues": Array [
+            Object {
+              "leagueId": "BCD234",
+              "leagueName": "Leaguer",
+            },
+          ],
+          "userTeams": Array [
+            Object {
+              "teamId": "CDE345",
+              "teamName": "Teamer",
+            },
+          ],
+          "username": "Juvanna",
+        }
+      }
+      stats={
+        Object {
+          "leagues": Array [
+            Object {
+              "createdDate": "10/17/05",
+              "icon": "fa fa-futbol",
+              "leagueId": "1a1",
+              "name": "EX Flint Adult Soccer",
+              "sport": "soccer",
+              "teams": Array [
+                Object {
+                  "coaches": Array [],
+                  "id": "2b1",
+                  "name": "Wombats",
+                  "players": Array [
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c1",
+                      "name": "Peter Parker",
+                      "playerStats": Object {
+                        "ballsLost": 5,
+                        "goals": 3,
+                        "goalsAllowed": 0,
+                        "penalties": 2,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 5,
+                        "tacklesWon": 10,
+                        "tackletsMissed": 13,
+                        "yellowCards": 1,
+                      },
+                      "position": "Striker",
+                    },
+                    Object {
+                      "currentPlayer": false,
+                      "id": "3c2",
+                      "name": "Bruce Banner",
+                      "playerStats": Object {
+                        "ballsLost": 2,
+                        "goals": 1,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 3,
+                        "tacklesWon": 13,
+                        "tackletsMissed": 10,
+                        "yellowCards": 0,
+                      },
+                      "position": "Left Mid",
+                    },
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c3",
+                      "name": "Stephen Strange",
+                      "playerStats": Object {
+                        "ballsLost": 0,
+                        "goals": 0,
+                        "goalsAllowed": 4,
+                        "penalties": 0,
+                        "redCards": 0,
+                        "saves": 7,
+                        "starts": 7,
+                        "tacklesWon": 0,
+                        "tackletsMissed": 0,
+                        "yellowCards": 0,
+                      },
+                      "position": "Goalie",
+                    },
+                  ],
+                  "rank": 1,
+                  "record": "3-1",
+                },
+                Object {
+                  "coaches": Array [],
+                  "id": "2b2",
+                  "name": "Lightning",
+                  "players": Array [
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c4",
+                      "name": "Jessica Jones",
+                      "playerStats": Object {
+                        "ballsLost": 6,
+                        "goals": 2,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 4,
+                        "tacklesWon": 9,
+                        "tackletsMissed": 12,
+                        "yellowCards": 2,
+                      },
+                      "position": "Striker",
+                    },
+                    Object {
+                      "currentPlayer": false,
+                      "id": "3c5",
+                      "name": "Luke Cage",
+                      "playerStats": Object {
+                        "ballsLost": 3,
+                        "goals": 0,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 2,
+                        "tacklesWon": 12,
+                        "tackletsMissed": 9,
+                        "yellowCards": 0,
+                      },
+                      "position": "Center Mid",
+                    },
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c6",
+                      "name": "Matt Murdoc",
+                      "playerStats": Object {
+                        "ballsLost": 0,
+                        "goals": 0,
+                        "goalsAllowed": 2,
+                        "penalties": 0,
+                        "redCards": 0,
+                        "saves": 9,
+                        "starts": 8,
+                        "tacklesWon": 0,
+                        "tackletsMissed": 0,
+                        "yellowCards": 0,
+                      },
+                      "position": "Goalie",
+                    },
+                  ],
+                  "rank": 2,
+                  "record": "2-2",
+                },
+                Object {
+                  "coaches": Array [],
+                  "id": "2b3",
+                  "name": "Vikings",
+                  "players": Array [
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c7",
+                      "name": "Hank Pym",
+                      "playerStats": Object {
+                        "ballsLost": 9,
+                        "goals": 1,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 1,
+                        "saves": 0,
+                        "starts": 5,
+                        "tacklesWon": 4,
+                        "tackletsMissed": 17,
+                        "yellowCards": 2,
+                      },
+                      "position": "Striker",
+                    },
+                    Object {
+                      "currentPlayer": false,
+                      "id": "3c8",
+                      "name": "Eddie Brock",
+                      "playerStats": Object {
+                        "ballsLost": 2,
+                        "goals": 1,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 1,
+                        "tacklesWon": 5,
+                        "tackletsMissed": 10,
+                        "yellowCards": 0,
+                      },
+                      "position": "Right Mid",
+                    },
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c9",
+                      "name": "Otto Octavius",
+                      "playerStats": Object {
+                        "ballsLost": 0,
+                        "goals": 0,
+                        "goalsAllowed": 7,
+                        "penalties": 0,
+                        "redCards": 0,
+                        "saves": 5,
+                        "starts": 4,
+                        "tacklesWon": 0,
+                        "tackletsMissed": 0,
+                        "yellowCards": 0,
+                      },
+                      "position": "Goalie",
+                    },
+                  ],
+                  "rank": 3,
+                  "record": "1-3",
+                },
+              ],
+            },
+            Object {
+              "createdDate": "05/22/13",
+              "icon": "fa fa-basketball-ball",
+              "leagueId": "1a2",
+              "name": "Rochester Kids Basketball",
+              "sport": "basketball",
+              "teams": Array [
+                Object {
+                  "coaches": Array [],
+                  "id": "2b4",
+                  "name": "Bombs",
+                  "players": Array [
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c10",
+                      "name": "Peter Parker",
+                      "playerStats": Object {
+                        "ballsLost": 5,
+                        "goals": 3,
+                        "goalsAllowed": 0,
+                        "penalties": 2,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 5,
+                        "tacklesWon": 10,
+                        "tackletsMissed": 13,
+                        "yellowCards": 1,
+                      },
+                      "position": "Striker",
+                    },
+                    Object {
+                      "currentPlayer": false,
+                      "id": "3c11",
+                      "name": "Bruce Banner",
+                      "playerStats": Object {
+                        "ballsLost": 2,
+                        "goals": 1,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 3,
+                        "tacklesWon": 13,
+                        "tackletsMissed": 10,
+                        "yellowCards": 0,
+                      },
+                      "position": "Left Mid",
+                    },
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c12",
+                      "name": "Stephen Strange",
+                      "playerStats": Object {
+                        "ballsLost": 0,
+                        "goals": 0,
+                        "goalsAllowed": 4,
+                        "penalties": 0,
+                        "redCards": 0,
+                        "saves": 7,
+                        "starts": 7,
+                        "tacklesWon": 0,
+                        "tackletsMissed": 0,
+                        "yellowCards": 0,
+                      },
+                      "position": "Goalie",
+                    },
+                  ],
+                  "rank": 1,
+                  "record": "3-1",
+                },
+                Object {
+                  "coaches": Array [],
+                  "id": "2b5",
+                  "name": "Thunder",
+                  "players": Array [
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c13",
+                      "name": "Jessica Jones",
+                      "playerStats": Object {
+                        "ballsLost": 6,
+                        "goals": 2,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 4,
+                        "tacklesWon": 9,
+                        "tackletsMissed": 12,
+                        "yellowCards": 2,
+                      },
+                      "position": "Striker",
+                    },
+                    Object {
+                      "currentPlayer": false,
+                      "id": "3c14",
+                      "name": "Luke Cage",
+                      "playerStats": Object {
+                        "ballsLost": 3,
+                        "goals": 0,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 2,
+                        "tacklesWon": 12,
+                        "tackletsMissed": 9,
+                        "yellowCards": 0,
+                      },
+                      "position": "Center Mid",
+                    },
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c15",
+                      "name": "Matt Murdoc",
+                      "playerStats": Object {
+                        "ballsLost": 0,
+                        "goals": 0,
+                        "goalsAllowed": 2,
+                        "penalties": 0,
+                        "redCards": 0,
+                        "saves": 9,
+                        "starts": 8,
+                        "tacklesWon": 0,
+                        "tackletsMissed": 0,
+                        "yellowCards": 0,
+                      },
+                      "position": "Goalie",
+                    },
+                  ],
+                  "rank": 2,
+                  "record": "2-2",
+                },
+                Object {
+                  "coaches": Array [],
+                  "id": "2b6",
+                  "name": "Ninjas",
+                  "players": Array [
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c16",
+                      "name": "Hank Pym",
+                      "playerStats": Object {
+                        "ballsLost": 9,
+                        "goals": 1,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 1,
+                        "saves": 0,
+                        "starts": 5,
+                        "tacklesWon": 4,
+                        "tackletsMissed": 17,
+                        "yellowCards": 2,
+                      },
+                      "position": "Striker",
+                    },
+                    Object {
+                      "currentPlayer": false,
+                      "id": "3c17",
+                      "name": "Eddie Brock",
+                      "playerStats": Object {
+                        "ballsLost": 2,
+                        "goals": 1,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 1,
+                        "tacklesWon": 5,
+                        "tackletsMissed": 10,
+                        "yellowCards": 0,
+                      },
+                      "position": "Right Mid",
+                    },
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c18",
+                      "name": "Otto Octavius",
+                      "playerStats": Object {
+                        "ballsLost": 0,
+                        "goals": 0,
+                        "goalsAllowed": 7,
+                        "penalties": 0,
+                        "redCards": 0,
+                        "saves": 5,
+                        "starts": 4,
+                        "tacklesWon": 0,
+                        "tackletsMissed": 0,
+                        "yellowCards": 0,
+                      },
+                      "position": "Goalie",
+                    },
+                  ],
+                  "rank": 3,
+                  "record": "1-3",
+                },
+              ],
+            },
+          ],
+        }
+      }
+    >
+      <Route>
+        <UserProfile
+          currentUser={
+            Object {
+              "email": "juvannameetmymom@gmail.com",
+              "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
+              "role": "admin",
+              "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
+              "userId": "ABC123",
+              "userLeagues": Array [
+                Object {
+                  "leagueId": "BCD234",
+                  "leagueName": "Leaguer",
+                },
+              ],
+              "userTeams": Array [
+                Object {
+                  "teamId": "CDE345",
+                  "teamName": "Teamer",
+                },
+              ],
+              "username": "Juvanna",
+            }
+          }
+          history={
+            Object {
+              "action": "POP",
+              "block": [Function],
+              "canGo": [Function],
+              "createHref": [Function],
+              "entries": Array [
+                Object {
+                  "hash": "",
+                  "key": "1w11sz",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                },
+              ],
+              "go": [Function],
+              "goBack": [Function],
+              "goForward": [Function],
+              "index": 0,
+              "length": 1,
+              "listen": [Function],
+              "location": Object {
+                "hash": "",
+                "key": "1w11sz",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              },
+              "push": [Function],
+              "replace": [Function],
+            }
+          }
+          location={
+            Object {
+              "hash": "",
+              "key": "1w11sz",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            }
+          }
+          match={
+            Object {
+              "isExact": true,
+              "params": Object {},
+              "path": "/",
+              "url": "/",
+            }
+          }
+          stats={
+            Object {
+              "leagues": Array [
+                Object {
+                  "createdDate": "10/17/05",
+                  "icon": "fa fa-futbol",
+                  "leagueId": "1a1",
+                  "name": "EX Flint Adult Soccer",
+                  "sport": "soccer",
+                  "teams": Array [
+                    Object {
+                      "coaches": Array [],
+                      "id": "2b1",
+                      "name": "Wombats",
+                      "players": Array [
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c1",
+                          "name": "Peter Parker",
+                          "playerStats": Object {
+                            "ballsLost": 5,
+                            "goals": 3,
+                            "goalsAllowed": 0,
+                            "penalties": 2,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 5,
+                            "tacklesWon": 10,
+                            "tackletsMissed": 13,
+                            "yellowCards": 1,
+                          },
+                          "position": "Striker",
+                        },
+                        Object {
+                          "currentPlayer": false,
+                          "id": "3c2",
+                          "name": "Bruce Banner",
+                          "playerStats": Object {
+                            "ballsLost": 2,
+                            "goals": 1,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 3,
+                            "tacklesWon": 13,
+                            "tackletsMissed": 10,
+                            "yellowCards": 0,
+                          },
+                          "position": "Left Mid",
+                        },
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c3",
+                          "name": "Stephen Strange",
+                          "playerStats": Object {
+                            "ballsLost": 0,
+                            "goals": 0,
+                            "goalsAllowed": 4,
+                            "penalties": 0,
+                            "redCards": 0,
+                            "saves": 7,
+                            "starts": 7,
+                            "tacklesWon": 0,
+                            "tackletsMissed": 0,
+                            "yellowCards": 0,
+                          },
+                          "position": "Goalie",
+                        },
+                      ],
+                      "rank": 1,
+                      "record": "3-1",
+                    },
+                    Object {
+                      "coaches": Array [],
+                      "id": "2b2",
+                      "name": "Lightning",
+                      "players": Array [
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c4",
+                          "name": "Jessica Jones",
+                          "playerStats": Object {
+                            "ballsLost": 6,
+                            "goals": 2,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 4,
+                            "tacklesWon": 9,
+                            "tackletsMissed": 12,
+                            "yellowCards": 2,
+                          },
+                          "position": "Striker",
+                        },
+                        Object {
+                          "currentPlayer": false,
+                          "id": "3c5",
+                          "name": "Luke Cage",
+                          "playerStats": Object {
+                            "ballsLost": 3,
+                            "goals": 0,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 2,
+                            "tacklesWon": 12,
+                            "tackletsMissed": 9,
+                            "yellowCards": 0,
+                          },
+                          "position": "Center Mid",
+                        },
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c6",
+                          "name": "Matt Murdoc",
+                          "playerStats": Object {
+                            "ballsLost": 0,
+                            "goals": 0,
+                            "goalsAllowed": 2,
+                            "penalties": 0,
+                            "redCards": 0,
+                            "saves": 9,
+                            "starts": 8,
+                            "tacklesWon": 0,
+                            "tackletsMissed": 0,
+                            "yellowCards": 0,
+                          },
+                          "position": "Goalie",
+                        },
+                      ],
+                      "rank": 2,
+                      "record": "2-2",
+                    },
+                    Object {
+                      "coaches": Array [],
+                      "id": "2b3",
+                      "name": "Vikings",
+                      "players": Array [
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c7",
+                          "name": "Hank Pym",
+                          "playerStats": Object {
+                            "ballsLost": 9,
+                            "goals": 1,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 1,
+                            "saves": 0,
+                            "starts": 5,
+                            "tacklesWon": 4,
+                            "tackletsMissed": 17,
+                            "yellowCards": 2,
+                          },
+                          "position": "Striker",
+                        },
+                        Object {
+                          "currentPlayer": false,
+                          "id": "3c8",
+                          "name": "Eddie Brock",
+                          "playerStats": Object {
+                            "ballsLost": 2,
+                            "goals": 1,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 1,
+                            "tacklesWon": 5,
+                            "tackletsMissed": 10,
+                            "yellowCards": 0,
+                          },
+                          "position": "Right Mid",
+                        },
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c9",
+                          "name": "Otto Octavius",
+                          "playerStats": Object {
+                            "ballsLost": 0,
+                            "goals": 0,
+                            "goalsAllowed": 7,
+                            "penalties": 0,
+                            "redCards": 0,
+                            "saves": 5,
+                            "starts": 4,
+                            "tacklesWon": 0,
+                            "tackletsMissed": 0,
+                            "yellowCards": 0,
+                          },
+                          "position": "Goalie",
+                        },
+                      ],
+                      "rank": 3,
+                      "record": "1-3",
+                    },
+                  ],
+                },
+                Object {
+                  "createdDate": "05/22/13",
+                  "icon": "fa fa-basketball-ball",
+                  "leagueId": "1a2",
+                  "name": "Rochester Kids Basketball",
+                  "sport": "basketball",
+                  "teams": Array [
+                    Object {
+                      "coaches": Array [],
+                      "id": "2b4",
+                      "name": "Bombs",
+                      "players": Array [
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c10",
+                          "name": "Peter Parker",
+                          "playerStats": Object {
+                            "ballsLost": 5,
+                            "goals": 3,
+                            "goalsAllowed": 0,
+                            "penalties": 2,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 5,
+                            "tacklesWon": 10,
+                            "tackletsMissed": 13,
+                            "yellowCards": 1,
+                          },
+                          "position": "Striker",
+                        },
+                        Object {
+                          "currentPlayer": false,
+                          "id": "3c11",
+                          "name": "Bruce Banner",
+                          "playerStats": Object {
+                            "ballsLost": 2,
+                            "goals": 1,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 3,
+                            "tacklesWon": 13,
+                            "tackletsMissed": 10,
+                            "yellowCards": 0,
+                          },
+                          "position": "Left Mid",
+                        },
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c12",
+                          "name": "Stephen Strange",
+                          "playerStats": Object {
+                            "ballsLost": 0,
+                            "goals": 0,
+                            "goalsAllowed": 4,
+                            "penalties": 0,
+                            "redCards": 0,
+                            "saves": 7,
+                            "starts": 7,
+                            "tacklesWon": 0,
+                            "tackletsMissed": 0,
+                            "yellowCards": 0,
+                          },
+                          "position": "Goalie",
+                        },
+                      ],
+                      "rank": 1,
+                      "record": "3-1",
+                    },
+                    Object {
+                      "coaches": Array [],
+                      "id": "2b5",
+                      "name": "Thunder",
+                      "players": Array [
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c13",
+                          "name": "Jessica Jones",
+                          "playerStats": Object {
+                            "ballsLost": 6,
+                            "goals": 2,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 4,
+                            "tacklesWon": 9,
+                            "tackletsMissed": 12,
+                            "yellowCards": 2,
+                          },
+                          "position": "Striker",
+                        },
+                        Object {
+                          "currentPlayer": false,
+                          "id": "3c14",
+                          "name": "Luke Cage",
+                          "playerStats": Object {
+                            "ballsLost": 3,
+                            "goals": 0,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 2,
+                            "tacklesWon": 12,
+                            "tackletsMissed": 9,
+                            "yellowCards": 0,
+                          },
+                          "position": "Center Mid",
+                        },
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c15",
+                          "name": "Matt Murdoc",
+                          "playerStats": Object {
+                            "ballsLost": 0,
+                            "goals": 0,
+                            "goalsAllowed": 2,
+                            "penalties": 0,
+                            "redCards": 0,
+                            "saves": 9,
+                            "starts": 8,
+                            "tacklesWon": 0,
+                            "tackletsMissed": 0,
+                            "yellowCards": 0,
+                          },
+                          "position": "Goalie",
+                        },
+                      ],
+                      "rank": 2,
+                      "record": "2-2",
+                    },
+                    Object {
+                      "coaches": Array [],
+                      "id": "2b6",
+                      "name": "Ninjas",
+                      "players": Array [
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c16",
+                          "name": "Hank Pym",
+                          "playerStats": Object {
+                            "ballsLost": 9,
+                            "goals": 1,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 1,
+                            "saves": 0,
+                            "starts": 5,
+                            "tacklesWon": 4,
+                            "tackletsMissed": 17,
+                            "yellowCards": 2,
+                          },
+                          "position": "Striker",
+                        },
+                        Object {
+                          "currentPlayer": false,
+                          "id": "3c17",
+                          "name": "Eddie Brock",
+                          "playerStats": Object {
+                            "ballsLost": 2,
+                            "goals": 1,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 1,
+                            "tacklesWon": 5,
+                            "tackletsMissed": 10,
+                            "yellowCards": 0,
+                          },
+                          "position": "Right Mid",
+                        },
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c18",
+                          "name": "Otto Octavius",
+                          "playerStats": Object {
+                            "ballsLost": 0,
+                            "goals": 0,
+                            "goalsAllowed": 7,
+                            "penalties": 0,
+                            "redCards": 0,
+                            "saves": 5,
+                            "starts": 4,
+                            "tacklesWon": 0,
+                            "tackletsMissed": 0,
+                            "yellowCards": 0,
+                          },
+                          "position": "Goalie",
+                        },
+                      ],
+                      "rank": 3,
+                      "record": "1-3",
+                    },
+                  ],
+                },
+              ],
+            }
+          }
+        >
+          <div
+            className="profile__container"
+          >
+            <UserProfileView
+              currentUser={
+                Object {
+                  "email": "juvannameetmymom@gmail.com",
+                  "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
+                  "role": "admin",
+                  "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
+                  "userId": "ABC123",
+                  "userLeagues": Array [
+                    Object {
+                      "leagueId": "BCD234",
+                      "leagueName": "Leaguer",
+                    },
+                  ],
+                  "userTeams": Array [
+                    Object {
+                      "teamId": "CDE345",
+                      "teamName": "Teamer",
+                    },
+                  ],
+                  "username": "Juvanna",
+                }
+              }
+              onClick={[Function]}
+            >
+              <div
+                className="profile__container"
+              >
+                <div
+                  className="profile"
+                >
+                  <div
+                    className="profile__left"
+                  >
+                    <h1
+                      className="profile__left__title"
+                    />
+                    <div
+                      className="profile__left__image"
+                    >
+                      <img
+                        src="https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="profile__right"
+                  >
+                    <div
+                      className="profile__right__links"
+                    >
+                      <a
+                        className="profile__right__links__button"
+                        href=""
+                        onClick={[Function]}
+                      >
+                        <i
+                          className="fa fa-ellipsis-v"
+                        />
+                      </a>
+                      <ul
+                        className="profile__right__links__menu js-profile-options"
+                      >
+                        <li
+                          className="profile__right__links__menu__item"
+                        >
+                          <a
+                            className="profile__right__links__menu__item__link"
+                            href=""
+                            onClick={[Function]}
+                          >
+                            Edit User
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <dl
+                      className="profile__right__list"
+                    >
+                      <div
+                        className="profile__right__list__item"
+                      >
+                        <dt
+                          className="profile__right__list__item__title"
+                        >
+                          First Name
+                        </dt>
+                        <dd
+                          className="profile__right__list__item__data"
+                        />
+                      </div>
+                      <div
+                        className="profile__right__list__item"
+                      >
+                        <dt
+                          className="profile__right__list__item__title"
+                        >
+                          Last Name
+                        </dt>
+                        <dd
+                          className="profile__right__list__item__data"
+                        />
+                      </div>
+                      <div
+                        className="profile__right__list__item"
+                      >
+                        <dt
+                          className="profile__right__list__item__title"
+                        >
+                          Email
+                        </dt>
+                        <dd
+                          className="profile__right__list__item__data"
+                        >
+                          juvannameetmymom@gmail.com
+                        </dd>
+                      </div>
+                      <div
+                        className="profile__right__list__item"
+                      >
+                        <dt
+                          className="profile__right__list__item__title"
+                        >
+                          Role
+                        </dt>
+                        <dd
+                          className="profile__right__list__item__data"
+                        >
+                          admin
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+            </UserProfileView>
+          </div>
+        </UserProfile>
+      </Route>
+    </withRouter(UserProfile)>
+  </Router>
+</MemoryRouter>
+`;
+
+exports[`<UserProfile /> updates via props 1`] = `
+<MemoryRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "xacp6d",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "xacp6d",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <withRouter(UserProfile)
+      count={50}
+      currentUser={
+        Object {
+          "email": "juvannameetmymom@gmail.com",
+          "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
+          "role": "admin",
+          "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
+          "userId": "ABC123",
+          "userLeagues": Array [
+            Object {
+              "leagueId": "BCD234",
+              "leagueName": "Leaguer",
+            },
+          ],
+          "userTeams": Array [
+            Object {
+              "teamId": "CDE345",
+              "teamName": "Teamer",
+            },
+          ],
+          "username": "Juvanna",
+        }
+      }
+      stats={
+        Object {
+          "leagues": Array [
+            Object {
+              "createdDate": "10/17/05",
+              "icon": "fa fa-futbol",
+              "leagueId": "1a1",
+              "name": "EX Flint Adult Soccer",
+              "sport": "soccer",
+              "teams": Array [
+                Object {
+                  "coaches": Array [],
+                  "id": "2b1",
+                  "name": "Wombats",
+                  "players": Array [
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c1",
+                      "name": "Peter Parker",
+                      "playerStats": Object {
+                        "ballsLost": 5,
+                        "goals": 3,
+                        "goalsAllowed": 0,
+                        "penalties": 2,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 5,
+                        "tacklesWon": 10,
+                        "tackletsMissed": 13,
+                        "yellowCards": 1,
+                      },
+                      "position": "Striker",
+                    },
+                    Object {
+                      "currentPlayer": false,
+                      "id": "3c2",
+                      "name": "Bruce Banner",
+                      "playerStats": Object {
+                        "ballsLost": 2,
+                        "goals": 1,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 3,
+                        "tacklesWon": 13,
+                        "tackletsMissed": 10,
+                        "yellowCards": 0,
+                      },
+                      "position": "Left Mid",
+                    },
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c3",
+                      "name": "Stephen Strange",
+                      "playerStats": Object {
+                        "ballsLost": 0,
+                        "goals": 0,
+                        "goalsAllowed": 4,
+                        "penalties": 0,
+                        "redCards": 0,
+                        "saves": 7,
+                        "starts": 7,
+                        "tacklesWon": 0,
+                        "tackletsMissed": 0,
+                        "yellowCards": 0,
+                      },
+                      "position": "Goalie",
+                    },
+                  ],
+                  "rank": 1,
+                  "record": "3-1",
+                },
+                Object {
+                  "coaches": Array [],
+                  "id": "2b2",
+                  "name": "Lightning",
+                  "players": Array [
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c4",
+                      "name": "Jessica Jones",
+                      "playerStats": Object {
+                        "ballsLost": 6,
+                        "goals": 2,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 4,
+                        "tacklesWon": 9,
+                        "tackletsMissed": 12,
+                        "yellowCards": 2,
+                      },
+                      "position": "Striker",
+                    },
+                    Object {
+                      "currentPlayer": false,
+                      "id": "3c5",
+                      "name": "Luke Cage",
+                      "playerStats": Object {
+                        "ballsLost": 3,
+                        "goals": 0,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 2,
+                        "tacklesWon": 12,
+                        "tackletsMissed": 9,
+                        "yellowCards": 0,
+                      },
+                      "position": "Center Mid",
+                    },
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c6",
+                      "name": "Matt Murdoc",
+                      "playerStats": Object {
+                        "ballsLost": 0,
+                        "goals": 0,
+                        "goalsAllowed": 2,
+                        "penalties": 0,
+                        "redCards": 0,
+                        "saves": 9,
+                        "starts": 8,
+                        "tacklesWon": 0,
+                        "tackletsMissed": 0,
+                        "yellowCards": 0,
+                      },
+                      "position": "Goalie",
+                    },
+                  ],
+                  "rank": 2,
+                  "record": "2-2",
+                },
+                Object {
+                  "coaches": Array [],
+                  "id": "2b3",
+                  "name": "Vikings",
+                  "players": Array [
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c7",
+                      "name": "Hank Pym",
+                      "playerStats": Object {
+                        "ballsLost": 9,
+                        "goals": 1,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 1,
+                        "saves": 0,
+                        "starts": 5,
+                        "tacklesWon": 4,
+                        "tackletsMissed": 17,
+                        "yellowCards": 2,
+                      },
+                      "position": "Striker",
+                    },
+                    Object {
+                      "currentPlayer": false,
+                      "id": "3c8",
+                      "name": "Eddie Brock",
+                      "playerStats": Object {
+                        "ballsLost": 2,
+                        "goals": 1,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 1,
+                        "tacklesWon": 5,
+                        "tackletsMissed": 10,
+                        "yellowCards": 0,
+                      },
+                      "position": "Right Mid",
+                    },
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c9",
+                      "name": "Otto Octavius",
+                      "playerStats": Object {
+                        "ballsLost": 0,
+                        "goals": 0,
+                        "goalsAllowed": 7,
+                        "penalties": 0,
+                        "redCards": 0,
+                        "saves": 5,
+                        "starts": 4,
+                        "tacklesWon": 0,
+                        "tackletsMissed": 0,
+                        "yellowCards": 0,
+                      },
+                      "position": "Goalie",
+                    },
+                  ],
+                  "rank": 3,
+                  "record": "1-3",
+                },
+              ],
+            },
+            Object {
+              "createdDate": "05/22/13",
+              "icon": "fa fa-basketball-ball",
+              "leagueId": "1a2",
+              "name": "Rochester Kids Basketball",
+              "sport": "basketball",
+              "teams": Array [
+                Object {
+                  "coaches": Array [],
+                  "id": "2b4",
+                  "name": "Bombs",
+                  "players": Array [
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c10",
+                      "name": "Peter Parker",
+                      "playerStats": Object {
+                        "ballsLost": 5,
+                        "goals": 3,
+                        "goalsAllowed": 0,
+                        "penalties": 2,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 5,
+                        "tacklesWon": 10,
+                        "tackletsMissed": 13,
+                        "yellowCards": 1,
+                      },
+                      "position": "Striker",
+                    },
+                    Object {
+                      "currentPlayer": false,
+                      "id": "3c11",
+                      "name": "Bruce Banner",
+                      "playerStats": Object {
+                        "ballsLost": 2,
+                        "goals": 1,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 3,
+                        "tacklesWon": 13,
+                        "tackletsMissed": 10,
+                        "yellowCards": 0,
+                      },
+                      "position": "Left Mid",
+                    },
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c12",
+                      "name": "Stephen Strange",
+                      "playerStats": Object {
+                        "ballsLost": 0,
+                        "goals": 0,
+                        "goalsAllowed": 4,
+                        "penalties": 0,
+                        "redCards": 0,
+                        "saves": 7,
+                        "starts": 7,
+                        "tacklesWon": 0,
+                        "tackletsMissed": 0,
+                        "yellowCards": 0,
+                      },
+                      "position": "Goalie",
+                    },
+                  ],
+                  "rank": 1,
+                  "record": "3-1",
+                },
+                Object {
+                  "coaches": Array [],
+                  "id": "2b5",
+                  "name": "Thunder",
+                  "players": Array [
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c13",
+                      "name": "Jessica Jones",
+                      "playerStats": Object {
+                        "ballsLost": 6,
+                        "goals": 2,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 4,
+                        "tacklesWon": 9,
+                        "tackletsMissed": 12,
+                        "yellowCards": 2,
+                      },
+                      "position": "Striker",
+                    },
+                    Object {
+                      "currentPlayer": false,
+                      "id": "3c14",
+                      "name": "Luke Cage",
+                      "playerStats": Object {
+                        "ballsLost": 3,
+                        "goals": 0,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 2,
+                        "tacklesWon": 12,
+                        "tackletsMissed": 9,
+                        "yellowCards": 0,
+                      },
+                      "position": "Center Mid",
+                    },
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c15",
+                      "name": "Matt Murdoc",
+                      "playerStats": Object {
+                        "ballsLost": 0,
+                        "goals": 0,
+                        "goalsAllowed": 2,
+                        "penalties": 0,
+                        "redCards": 0,
+                        "saves": 9,
+                        "starts": 8,
+                        "tacklesWon": 0,
+                        "tackletsMissed": 0,
+                        "yellowCards": 0,
+                      },
+                      "position": "Goalie",
+                    },
+                  ],
+                  "rank": 2,
+                  "record": "2-2",
+                },
+                Object {
+                  "coaches": Array [],
+                  "id": "2b6",
+                  "name": "Ninjas",
+                  "players": Array [
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c16",
+                      "name": "Hank Pym",
+                      "playerStats": Object {
+                        "ballsLost": 9,
+                        "goals": 1,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 1,
+                        "saves": 0,
+                        "starts": 5,
+                        "tacklesWon": 4,
+                        "tackletsMissed": 17,
+                        "yellowCards": 2,
+                      },
+                      "position": "Striker",
+                    },
+                    Object {
+                      "currentPlayer": false,
+                      "id": "3c17",
+                      "name": "Eddie Brock",
+                      "playerStats": Object {
+                        "ballsLost": 2,
+                        "goals": 1,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 1,
+                        "tacklesWon": 5,
+                        "tackletsMissed": 10,
+                        "yellowCards": 0,
+                      },
+                      "position": "Right Mid",
+                    },
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c18",
+                      "name": "Otto Octavius",
+                      "playerStats": Object {
+                        "ballsLost": 0,
+                        "goals": 0,
+                        "goalsAllowed": 7,
+                        "penalties": 0,
+                        "redCards": 0,
+                        "saves": 5,
+                        "starts": 4,
+                        "tacklesWon": 0,
+                        "tackletsMissed": 0,
+                        "yellowCards": 0,
+                      },
+                      "position": "Goalie",
+                    },
+                  ],
+                  "rank": 3,
+                  "record": "1-3",
+                },
+              ],
+            },
+          ],
+        }
+      }
+    >
+      <Route>
+        <UserProfile
+          count={50}
+          currentUser={
+            Object {
+              "email": "juvannameetmymom@gmail.com",
+              "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
+              "role": "admin",
+              "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
+              "userId": "ABC123",
+              "userLeagues": Array [
+                Object {
+                  "leagueId": "BCD234",
+                  "leagueName": "Leaguer",
+                },
+              ],
+              "userTeams": Array [
+                Object {
+                  "teamId": "CDE345",
+                  "teamName": "Teamer",
+                },
+              ],
+              "username": "Juvanna",
+            }
+          }
+          history={
+            Object {
+              "action": "POP",
+              "block": [Function],
+              "canGo": [Function],
+              "createHref": [Function],
+              "entries": Array [
+                Object {
+                  "hash": "",
+                  "key": "xacp6d",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                },
+              ],
+              "go": [Function],
+              "goBack": [Function],
+              "goForward": [Function],
+              "index": 0,
+              "length": 1,
+              "listen": [Function],
+              "location": Object {
+                "hash": "",
+                "key": "xacp6d",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              },
+              "push": [Function],
+              "replace": [Function],
+            }
+          }
+          location={
+            Object {
+              "hash": "",
+              "key": "xacp6d",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            }
+          }
+          match={
+            Object {
+              "isExact": true,
+              "params": Object {},
+              "path": "/",
+              "url": "/",
+            }
+          }
+          stats={
+            Object {
+              "leagues": Array [
+                Object {
+                  "createdDate": "10/17/05",
+                  "icon": "fa fa-futbol",
+                  "leagueId": "1a1",
+                  "name": "EX Flint Adult Soccer",
+                  "sport": "soccer",
+                  "teams": Array [
+                    Object {
+                      "coaches": Array [],
+                      "id": "2b1",
+                      "name": "Wombats",
+                      "players": Array [
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c1",
+                          "name": "Peter Parker",
+                          "playerStats": Object {
+                            "ballsLost": 5,
+                            "goals": 3,
+                            "goalsAllowed": 0,
+                            "penalties": 2,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 5,
+                            "tacklesWon": 10,
+                            "tackletsMissed": 13,
+                            "yellowCards": 1,
+                          },
+                          "position": "Striker",
+                        },
+                        Object {
+                          "currentPlayer": false,
+                          "id": "3c2",
+                          "name": "Bruce Banner",
+                          "playerStats": Object {
+                            "ballsLost": 2,
+                            "goals": 1,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 3,
+                            "tacklesWon": 13,
+                            "tackletsMissed": 10,
+                            "yellowCards": 0,
+                          },
+                          "position": "Left Mid",
+                        },
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c3",
+                          "name": "Stephen Strange",
+                          "playerStats": Object {
+                            "ballsLost": 0,
+                            "goals": 0,
+                            "goalsAllowed": 4,
+                            "penalties": 0,
+                            "redCards": 0,
+                            "saves": 7,
+                            "starts": 7,
+                            "tacklesWon": 0,
+                            "tackletsMissed": 0,
+                            "yellowCards": 0,
+                          },
+                          "position": "Goalie",
+                        },
+                      ],
+                      "rank": 1,
+                      "record": "3-1",
+                    },
+                    Object {
+                      "coaches": Array [],
+                      "id": "2b2",
+                      "name": "Lightning",
+                      "players": Array [
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c4",
+                          "name": "Jessica Jones",
+                          "playerStats": Object {
+                            "ballsLost": 6,
+                            "goals": 2,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 4,
+                            "tacklesWon": 9,
+                            "tackletsMissed": 12,
+                            "yellowCards": 2,
+                          },
+                          "position": "Striker",
+                        },
+                        Object {
+                          "currentPlayer": false,
+                          "id": "3c5",
+                          "name": "Luke Cage",
+                          "playerStats": Object {
+                            "ballsLost": 3,
+                            "goals": 0,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 2,
+                            "tacklesWon": 12,
+                            "tackletsMissed": 9,
+                            "yellowCards": 0,
+                          },
+                          "position": "Center Mid",
+                        },
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c6",
+                          "name": "Matt Murdoc",
+                          "playerStats": Object {
+                            "ballsLost": 0,
+                            "goals": 0,
+                            "goalsAllowed": 2,
+                            "penalties": 0,
+                            "redCards": 0,
+                            "saves": 9,
+                            "starts": 8,
+                            "tacklesWon": 0,
+                            "tackletsMissed": 0,
+                            "yellowCards": 0,
+                          },
+                          "position": "Goalie",
+                        },
+                      ],
+                      "rank": 2,
+                      "record": "2-2",
+                    },
+                    Object {
+                      "coaches": Array [],
+                      "id": "2b3",
+                      "name": "Vikings",
+                      "players": Array [
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c7",
+                          "name": "Hank Pym",
+                          "playerStats": Object {
+                            "ballsLost": 9,
+                            "goals": 1,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 1,
+                            "saves": 0,
+                            "starts": 5,
+                            "tacklesWon": 4,
+                            "tackletsMissed": 17,
+                            "yellowCards": 2,
+                          },
+                          "position": "Striker",
+                        },
+                        Object {
+                          "currentPlayer": false,
+                          "id": "3c8",
+                          "name": "Eddie Brock",
+                          "playerStats": Object {
+                            "ballsLost": 2,
+                            "goals": 1,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 1,
+                            "tacklesWon": 5,
+                            "tackletsMissed": 10,
+                            "yellowCards": 0,
+                          },
+                          "position": "Right Mid",
+                        },
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c9",
+                          "name": "Otto Octavius",
+                          "playerStats": Object {
+                            "ballsLost": 0,
+                            "goals": 0,
+                            "goalsAllowed": 7,
+                            "penalties": 0,
+                            "redCards": 0,
+                            "saves": 5,
+                            "starts": 4,
+                            "tacklesWon": 0,
+                            "tackletsMissed": 0,
+                            "yellowCards": 0,
+                          },
+                          "position": "Goalie",
+                        },
+                      ],
+                      "rank": 3,
+                      "record": "1-3",
+                    },
+                  ],
+                },
+                Object {
+                  "createdDate": "05/22/13",
+                  "icon": "fa fa-basketball-ball",
+                  "leagueId": "1a2",
+                  "name": "Rochester Kids Basketball",
+                  "sport": "basketball",
+                  "teams": Array [
+                    Object {
+                      "coaches": Array [],
+                      "id": "2b4",
+                      "name": "Bombs",
+                      "players": Array [
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c10",
+                          "name": "Peter Parker",
+                          "playerStats": Object {
+                            "ballsLost": 5,
+                            "goals": 3,
+                            "goalsAllowed": 0,
+                            "penalties": 2,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 5,
+                            "tacklesWon": 10,
+                            "tackletsMissed": 13,
+                            "yellowCards": 1,
+                          },
+                          "position": "Striker",
+                        },
+                        Object {
+                          "currentPlayer": false,
+                          "id": "3c11",
+                          "name": "Bruce Banner",
+                          "playerStats": Object {
+                            "ballsLost": 2,
+                            "goals": 1,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 3,
+                            "tacklesWon": 13,
+                            "tackletsMissed": 10,
+                            "yellowCards": 0,
+                          },
+                          "position": "Left Mid",
+                        },
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c12",
+                          "name": "Stephen Strange",
+                          "playerStats": Object {
+                            "ballsLost": 0,
+                            "goals": 0,
+                            "goalsAllowed": 4,
+                            "penalties": 0,
+                            "redCards": 0,
+                            "saves": 7,
+                            "starts": 7,
+                            "tacklesWon": 0,
+                            "tackletsMissed": 0,
+                            "yellowCards": 0,
+                          },
+                          "position": "Goalie",
+                        },
+                      ],
+                      "rank": 1,
+                      "record": "3-1",
+                    },
+                    Object {
+                      "coaches": Array [],
+                      "id": "2b5",
+                      "name": "Thunder",
+                      "players": Array [
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c13",
+                          "name": "Jessica Jones",
+                          "playerStats": Object {
+                            "ballsLost": 6,
+                            "goals": 2,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 4,
+                            "tacklesWon": 9,
+                            "tackletsMissed": 12,
+                            "yellowCards": 2,
+                          },
+                          "position": "Striker",
+                        },
+                        Object {
+                          "currentPlayer": false,
+                          "id": "3c14",
+                          "name": "Luke Cage",
+                          "playerStats": Object {
+                            "ballsLost": 3,
+                            "goals": 0,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 2,
+                            "tacklesWon": 12,
+                            "tackletsMissed": 9,
+                            "yellowCards": 0,
+                          },
+                          "position": "Center Mid",
+                        },
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c15",
+                          "name": "Matt Murdoc",
+                          "playerStats": Object {
+                            "ballsLost": 0,
+                            "goals": 0,
+                            "goalsAllowed": 2,
+                            "penalties": 0,
+                            "redCards": 0,
+                            "saves": 9,
+                            "starts": 8,
+                            "tacklesWon": 0,
+                            "tackletsMissed": 0,
+                            "yellowCards": 0,
+                          },
+                          "position": "Goalie",
+                        },
+                      ],
+                      "rank": 2,
+                      "record": "2-2",
+                    },
+                    Object {
+                      "coaches": Array [],
+                      "id": "2b6",
+                      "name": "Ninjas",
+                      "players": Array [
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c16",
+                          "name": "Hank Pym",
+                          "playerStats": Object {
+                            "ballsLost": 9,
+                            "goals": 1,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 1,
+                            "saves": 0,
+                            "starts": 5,
+                            "tacklesWon": 4,
+                            "tackletsMissed": 17,
+                            "yellowCards": 2,
+                          },
+                          "position": "Striker",
+                        },
+                        Object {
+                          "currentPlayer": false,
+                          "id": "3c17",
+                          "name": "Eddie Brock",
+                          "playerStats": Object {
+                            "ballsLost": 2,
+                            "goals": 1,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 1,
+                            "tacklesWon": 5,
+                            "tackletsMissed": 10,
+                            "yellowCards": 0,
+                          },
+                          "position": "Right Mid",
+                        },
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c18",
+                          "name": "Otto Octavius",
+                          "playerStats": Object {
+                            "ballsLost": 0,
+                            "goals": 0,
+                            "goalsAllowed": 7,
+                            "penalties": 0,
+                            "redCards": 0,
+                            "saves": 5,
+                            "starts": 4,
+                            "tacklesWon": 0,
+                            "tackletsMissed": 0,
+                            "yellowCards": 0,
+                          },
+                          "position": "Goalie",
+                        },
+                      ],
+                      "rank": 3,
+                      "record": "1-3",
+                    },
+                  ],
+                },
+              ],
+            }
+          }
+        >
+          <div
+            className="profile__container"
+          >
+            <UserProfileView
+              currentUser={
+                Object {
+                  "email": "juvannameetmymom@gmail.com",
+                  "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
+                  "role": "admin",
+                  "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
+                  "userId": "ABC123",
+                  "userLeagues": Array [
+                    Object {
+                      "leagueId": "BCD234",
+                      "leagueName": "Leaguer",
+                    },
+                  ],
+                  "userTeams": Array [
+                    Object {
+                      "teamId": "CDE345",
+                      "teamName": "Teamer",
+                    },
+                  ],
+                  "username": "Juvanna",
+                }
+              }
+              onClick={[Function]}
+            >
+              <div
+                className="profile__container"
+              >
+                <div
+                  className="profile"
+                >
+                  <div
+                    className="profile__left"
+                  >
+                    <h1
+                      className="profile__left__title"
+                    />
+                    <div
+                      className="profile__left__image"
+                    >
+                      <img
+                        src="https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="profile__right"
+                  >
+                    <div
+                      className="profile__right__links"
+                    >
+                      <a
+                        className="profile__right__links__button"
+                        href=""
+                        onClick={[Function]}
+                      >
+                        <i
+                          className="fa fa-ellipsis-v"
+                        />
+                      </a>
+                      <ul
+                        className="profile__right__links__menu js-profile-options"
+                      >
+                        <li
+                          className="profile__right__links__menu__item"
+                        >
+                          <a
+                            className="profile__right__links__menu__item__link"
+                            href=""
+                            onClick={[Function]}
+                          >
+                            Edit User
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <dl
+                      className="profile__right__list"
+                    >
+                      <div
+                        className="profile__right__list__item"
+                      >
+                        <dt
+                          className="profile__right__list__item__title"
+                        >
+                          First Name
+                        </dt>
+                        <dd
+                          className="profile__right__list__item__data"
+                        />
+                      </div>
+                      <div
+                        className="profile__right__list__item"
+                      >
+                        <dt
+                          className="profile__right__list__item__title"
+                        >
+                          Last Name
+                        </dt>
+                        <dd
+                          className="profile__right__list__item__data"
+                        />
+                      </div>
+                      <div
+                        className="profile__right__list__item"
+                      >
+                        <dt
+                          className="profile__right__list__item__title"
+                        >
+                          Email
+                        </dt>
+                        <dd
+                          className="profile__right__list__item__data"
+                        >
+                          juvannameetmymom@gmail.com
+                        </dd>
+                      </div>
+                      <div
+                        className="profile__right__list__item"
+                      >
+                        <dt
+                          className="profile__right__list__item__title"
+                        >
+                          Role
+                        </dt>
+                        <dd
+                          className="profile__right__list__item__data"
+                        >
+                          admin
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+            </UserProfileView>
+          </div>
+        </UserProfile>
+      </Route>
+    </withRouter(UserProfile)>
+  </Router>
+</MemoryRouter>
+`;
+
+exports[`<UserProfile /> updates via props 2`] = `
+<MemoryRouter
+  count={10}
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "xacp6d",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "xacp6d",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <withRouter(UserProfile)
+      count={50}
+      currentUser={
+        Object {
+          "email": "juvannameetmymom@gmail.com",
+          "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
+          "role": "admin",
+          "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
+          "userId": "ABC123",
+          "userLeagues": Array [
+            Object {
+              "leagueId": "BCD234",
+              "leagueName": "Leaguer",
+            },
+          ],
+          "userTeams": Array [
+            Object {
+              "teamId": "CDE345",
+              "teamName": "Teamer",
+            },
+          ],
+          "username": "Juvanna",
+        }
+      }
+      stats={
+        Object {
+          "leagues": Array [
+            Object {
+              "createdDate": "10/17/05",
+              "icon": "fa fa-futbol",
+              "leagueId": "1a1",
+              "name": "EX Flint Adult Soccer",
+              "sport": "soccer",
+              "teams": Array [
+                Object {
+                  "coaches": Array [],
+                  "id": "2b1",
+                  "name": "Wombats",
+                  "players": Array [
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c1",
+                      "name": "Peter Parker",
+                      "playerStats": Object {
+                        "ballsLost": 5,
+                        "goals": 3,
+                        "goalsAllowed": 0,
+                        "penalties": 2,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 5,
+                        "tacklesWon": 10,
+                        "tackletsMissed": 13,
+                        "yellowCards": 1,
+                      },
+                      "position": "Striker",
+                    },
+                    Object {
+                      "currentPlayer": false,
+                      "id": "3c2",
+                      "name": "Bruce Banner",
+                      "playerStats": Object {
+                        "ballsLost": 2,
+                        "goals": 1,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 3,
+                        "tacklesWon": 13,
+                        "tackletsMissed": 10,
+                        "yellowCards": 0,
+                      },
+                      "position": "Left Mid",
+                    },
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c3",
+                      "name": "Stephen Strange",
+                      "playerStats": Object {
+                        "ballsLost": 0,
+                        "goals": 0,
+                        "goalsAllowed": 4,
+                        "penalties": 0,
+                        "redCards": 0,
+                        "saves": 7,
+                        "starts": 7,
+                        "tacklesWon": 0,
+                        "tackletsMissed": 0,
+                        "yellowCards": 0,
+                      },
+                      "position": "Goalie",
+                    },
+                  ],
+                  "rank": 1,
+                  "record": "3-1",
+                },
+                Object {
+                  "coaches": Array [],
+                  "id": "2b2",
+                  "name": "Lightning",
+                  "players": Array [
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c4",
+                      "name": "Jessica Jones",
+                      "playerStats": Object {
+                        "ballsLost": 6,
+                        "goals": 2,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 4,
+                        "tacklesWon": 9,
+                        "tackletsMissed": 12,
+                        "yellowCards": 2,
+                      },
+                      "position": "Striker",
+                    },
+                    Object {
+                      "currentPlayer": false,
+                      "id": "3c5",
+                      "name": "Luke Cage",
+                      "playerStats": Object {
+                        "ballsLost": 3,
+                        "goals": 0,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 2,
+                        "tacklesWon": 12,
+                        "tackletsMissed": 9,
+                        "yellowCards": 0,
+                      },
+                      "position": "Center Mid",
+                    },
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c6",
+                      "name": "Matt Murdoc",
+                      "playerStats": Object {
+                        "ballsLost": 0,
+                        "goals": 0,
+                        "goalsAllowed": 2,
+                        "penalties": 0,
+                        "redCards": 0,
+                        "saves": 9,
+                        "starts": 8,
+                        "tacklesWon": 0,
+                        "tackletsMissed": 0,
+                        "yellowCards": 0,
+                      },
+                      "position": "Goalie",
+                    },
+                  ],
+                  "rank": 2,
+                  "record": "2-2",
+                },
+                Object {
+                  "coaches": Array [],
+                  "id": "2b3",
+                  "name": "Vikings",
+                  "players": Array [
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c7",
+                      "name": "Hank Pym",
+                      "playerStats": Object {
+                        "ballsLost": 9,
+                        "goals": 1,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 1,
+                        "saves": 0,
+                        "starts": 5,
+                        "tacklesWon": 4,
+                        "tackletsMissed": 17,
+                        "yellowCards": 2,
+                      },
+                      "position": "Striker",
+                    },
+                    Object {
+                      "currentPlayer": false,
+                      "id": "3c8",
+                      "name": "Eddie Brock",
+                      "playerStats": Object {
+                        "ballsLost": 2,
+                        "goals": 1,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 1,
+                        "tacklesWon": 5,
+                        "tackletsMissed": 10,
+                        "yellowCards": 0,
+                      },
+                      "position": "Right Mid",
+                    },
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c9",
+                      "name": "Otto Octavius",
+                      "playerStats": Object {
+                        "ballsLost": 0,
+                        "goals": 0,
+                        "goalsAllowed": 7,
+                        "penalties": 0,
+                        "redCards": 0,
+                        "saves": 5,
+                        "starts": 4,
+                        "tacklesWon": 0,
+                        "tackletsMissed": 0,
+                        "yellowCards": 0,
+                      },
+                      "position": "Goalie",
+                    },
+                  ],
+                  "rank": 3,
+                  "record": "1-3",
+                },
+              ],
+            },
+            Object {
+              "createdDate": "05/22/13",
+              "icon": "fa fa-basketball-ball",
+              "leagueId": "1a2",
+              "name": "Rochester Kids Basketball",
+              "sport": "basketball",
+              "teams": Array [
+                Object {
+                  "coaches": Array [],
+                  "id": "2b4",
+                  "name": "Bombs",
+                  "players": Array [
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c10",
+                      "name": "Peter Parker",
+                      "playerStats": Object {
+                        "ballsLost": 5,
+                        "goals": 3,
+                        "goalsAllowed": 0,
+                        "penalties": 2,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 5,
+                        "tacklesWon": 10,
+                        "tackletsMissed": 13,
+                        "yellowCards": 1,
+                      },
+                      "position": "Striker",
+                    },
+                    Object {
+                      "currentPlayer": false,
+                      "id": "3c11",
+                      "name": "Bruce Banner",
+                      "playerStats": Object {
+                        "ballsLost": 2,
+                        "goals": 1,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 3,
+                        "tacklesWon": 13,
+                        "tackletsMissed": 10,
+                        "yellowCards": 0,
+                      },
+                      "position": "Left Mid",
+                    },
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c12",
+                      "name": "Stephen Strange",
+                      "playerStats": Object {
+                        "ballsLost": 0,
+                        "goals": 0,
+                        "goalsAllowed": 4,
+                        "penalties": 0,
+                        "redCards": 0,
+                        "saves": 7,
+                        "starts": 7,
+                        "tacklesWon": 0,
+                        "tackletsMissed": 0,
+                        "yellowCards": 0,
+                      },
+                      "position": "Goalie",
+                    },
+                  ],
+                  "rank": 1,
+                  "record": "3-1",
+                },
+                Object {
+                  "coaches": Array [],
+                  "id": "2b5",
+                  "name": "Thunder",
+                  "players": Array [
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c13",
+                      "name": "Jessica Jones",
+                      "playerStats": Object {
+                        "ballsLost": 6,
+                        "goals": 2,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 4,
+                        "tacklesWon": 9,
+                        "tackletsMissed": 12,
+                        "yellowCards": 2,
+                      },
+                      "position": "Striker",
+                    },
+                    Object {
+                      "currentPlayer": false,
+                      "id": "3c14",
+                      "name": "Luke Cage",
+                      "playerStats": Object {
+                        "ballsLost": 3,
+                        "goals": 0,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 2,
+                        "tacklesWon": 12,
+                        "tackletsMissed": 9,
+                        "yellowCards": 0,
+                      },
+                      "position": "Center Mid",
+                    },
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c15",
+                      "name": "Matt Murdoc",
+                      "playerStats": Object {
+                        "ballsLost": 0,
+                        "goals": 0,
+                        "goalsAllowed": 2,
+                        "penalties": 0,
+                        "redCards": 0,
+                        "saves": 9,
+                        "starts": 8,
+                        "tacklesWon": 0,
+                        "tackletsMissed": 0,
+                        "yellowCards": 0,
+                      },
+                      "position": "Goalie",
+                    },
+                  ],
+                  "rank": 2,
+                  "record": "2-2",
+                },
+                Object {
+                  "coaches": Array [],
+                  "id": "2b6",
+                  "name": "Ninjas",
+                  "players": Array [
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c16",
+                      "name": "Hank Pym",
+                      "playerStats": Object {
+                        "ballsLost": 9,
+                        "goals": 1,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 1,
+                        "saves": 0,
+                        "starts": 5,
+                        "tacklesWon": 4,
+                        "tackletsMissed": 17,
+                        "yellowCards": 2,
+                      },
+                      "position": "Striker",
+                    },
+                    Object {
+                      "currentPlayer": false,
+                      "id": "3c17",
+                      "name": "Eddie Brock",
+                      "playerStats": Object {
+                        "ballsLost": 2,
+                        "goals": 1,
+                        "goalsAllowed": 0,
+                        "penalties": 3,
+                        "redCards": 0,
+                        "saves": 0,
+                        "starts": 1,
+                        "tacklesWon": 5,
+                        "tackletsMissed": 10,
+                        "yellowCards": 0,
+                      },
+                      "position": "Right Mid",
+                    },
+                    Object {
+                      "currentPlayer": true,
+                      "id": "3c18",
+                      "name": "Otto Octavius",
+                      "playerStats": Object {
+                        "ballsLost": 0,
+                        "goals": 0,
+                        "goalsAllowed": 7,
+                        "penalties": 0,
+                        "redCards": 0,
+                        "saves": 5,
+                        "starts": 4,
+                        "tacklesWon": 0,
+                        "tackletsMissed": 0,
+                        "yellowCards": 0,
+                      },
+                      "position": "Goalie",
+                    },
+                  ],
+                  "rank": 3,
+                  "record": "1-3",
+                },
+              ],
+            },
+          ],
+        }
+      }
+    >
+      <Route>
+        <UserProfile
+          count={50}
+          currentUser={
+            Object {
+              "email": "juvannameetmymom@gmail.com",
+              "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
+              "role": "admin",
+              "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
+              "userId": "ABC123",
+              "userLeagues": Array [
+                Object {
+                  "leagueId": "BCD234",
+                  "leagueName": "Leaguer",
+                },
+              ],
+              "userTeams": Array [
+                Object {
+                  "teamId": "CDE345",
+                  "teamName": "Teamer",
+                },
+              ],
+              "username": "Juvanna",
+            }
+          }
+          history={
+            Object {
+              "action": "POP",
+              "block": [Function],
+              "canGo": [Function],
+              "createHref": [Function],
+              "entries": Array [
+                Object {
+                  "hash": "",
+                  "key": "xacp6d",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                },
+              ],
+              "go": [Function],
+              "goBack": [Function],
+              "goForward": [Function],
+              "index": 0,
+              "length": 1,
+              "listen": [Function],
+              "location": Object {
+                "hash": "",
+                "key": "xacp6d",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              },
+              "push": [Function],
+              "replace": [Function],
+            }
+          }
+          location={
+            Object {
+              "hash": "",
+              "key": "xacp6d",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            }
+          }
+          match={
+            Object {
+              "isExact": true,
+              "params": Object {},
+              "path": "/",
+              "url": "/",
+            }
+          }
+          stats={
+            Object {
+              "leagues": Array [
+                Object {
+                  "createdDate": "10/17/05",
+                  "icon": "fa fa-futbol",
+                  "leagueId": "1a1",
+                  "name": "EX Flint Adult Soccer",
+                  "sport": "soccer",
+                  "teams": Array [
+                    Object {
+                      "coaches": Array [],
+                      "id": "2b1",
+                      "name": "Wombats",
+                      "players": Array [
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c1",
+                          "name": "Peter Parker",
+                          "playerStats": Object {
+                            "ballsLost": 5,
+                            "goals": 3,
+                            "goalsAllowed": 0,
+                            "penalties": 2,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 5,
+                            "tacklesWon": 10,
+                            "tackletsMissed": 13,
+                            "yellowCards": 1,
+                          },
+                          "position": "Striker",
+                        },
+                        Object {
+                          "currentPlayer": false,
+                          "id": "3c2",
+                          "name": "Bruce Banner",
+                          "playerStats": Object {
+                            "ballsLost": 2,
+                            "goals": 1,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 3,
+                            "tacklesWon": 13,
+                            "tackletsMissed": 10,
+                            "yellowCards": 0,
+                          },
+                          "position": "Left Mid",
+                        },
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c3",
+                          "name": "Stephen Strange",
+                          "playerStats": Object {
+                            "ballsLost": 0,
+                            "goals": 0,
+                            "goalsAllowed": 4,
+                            "penalties": 0,
+                            "redCards": 0,
+                            "saves": 7,
+                            "starts": 7,
+                            "tacklesWon": 0,
+                            "tackletsMissed": 0,
+                            "yellowCards": 0,
+                          },
+                          "position": "Goalie",
+                        },
+                      ],
+                      "rank": 1,
+                      "record": "3-1",
+                    },
+                    Object {
+                      "coaches": Array [],
+                      "id": "2b2",
+                      "name": "Lightning",
+                      "players": Array [
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c4",
+                          "name": "Jessica Jones",
+                          "playerStats": Object {
+                            "ballsLost": 6,
+                            "goals": 2,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 4,
+                            "tacklesWon": 9,
+                            "tackletsMissed": 12,
+                            "yellowCards": 2,
+                          },
+                          "position": "Striker",
+                        },
+                        Object {
+                          "currentPlayer": false,
+                          "id": "3c5",
+                          "name": "Luke Cage",
+                          "playerStats": Object {
+                            "ballsLost": 3,
+                            "goals": 0,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 2,
+                            "tacklesWon": 12,
+                            "tackletsMissed": 9,
+                            "yellowCards": 0,
+                          },
+                          "position": "Center Mid",
+                        },
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c6",
+                          "name": "Matt Murdoc",
+                          "playerStats": Object {
+                            "ballsLost": 0,
+                            "goals": 0,
+                            "goalsAllowed": 2,
+                            "penalties": 0,
+                            "redCards": 0,
+                            "saves": 9,
+                            "starts": 8,
+                            "tacklesWon": 0,
+                            "tackletsMissed": 0,
+                            "yellowCards": 0,
+                          },
+                          "position": "Goalie",
+                        },
+                      ],
+                      "rank": 2,
+                      "record": "2-2",
+                    },
+                    Object {
+                      "coaches": Array [],
+                      "id": "2b3",
+                      "name": "Vikings",
+                      "players": Array [
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c7",
+                          "name": "Hank Pym",
+                          "playerStats": Object {
+                            "ballsLost": 9,
+                            "goals": 1,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 1,
+                            "saves": 0,
+                            "starts": 5,
+                            "tacklesWon": 4,
+                            "tackletsMissed": 17,
+                            "yellowCards": 2,
+                          },
+                          "position": "Striker",
+                        },
+                        Object {
+                          "currentPlayer": false,
+                          "id": "3c8",
+                          "name": "Eddie Brock",
+                          "playerStats": Object {
+                            "ballsLost": 2,
+                            "goals": 1,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 1,
+                            "tacklesWon": 5,
+                            "tackletsMissed": 10,
+                            "yellowCards": 0,
+                          },
+                          "position": "Right Mid",
+                        },
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c9",
+                          "name": "Otto Octavius",
+                          "playerStats": Object {
+                            "ballsLost": 0,
+                            "goals": 0,
+                            "goalsAllowed": 7,
+                            "penalties": 0,
+                            "redCards": 0,
+                            "saves": 5,
+                            "starts": 4,
+                            "tacklesWon": 0,
+                            "tackletsMissed": 0,
+                            "yellowCards": 0,
+                          },
+                          "position": "Goalie",
+                        },
+                      ],
+                      "rank": 3,
+                      "record": "1-3",
+                    },
+                  ],
+                },
+                Object {
+                  "createdDate": "05/22/13",
+                  "icon": "fa fa-basketball-ball",
+                  "leagueId": "1a2",
+                  "name": "Rochester Kids Basketball",
+                  "sport": "basketball",
+                  "teams": Array [
+                    Object {
+                      "coaches": Array [],
+                      "id": "2b4",
+                      "name": "Bombs",
+                      "players": Array [
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c10",
+                          "name": "Peter Parker",
+                          "playerStats": Object {
+                            "ballsLost": 5,
+                            "goals": 3,
+                            "goalsAllowed": 0,
+                            "penalties": 2,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 5,
+                            "tacklesWon": 10,
+                            "tackletsMissed": 13,
+                            "yellowCards": 1,
+                          },
+                          "position": "Striker",
+                        },
+                        Object {
+                          "currentPlayer": false,
+                          "id": "3c11",
+                          "name": "Bruce Banner",
+                          "playerStats": Object {
+                            "ballsLost": 2,
+                            "goals": 1,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 3,
+                            "tacklesWon": 13,
+                            "tackletsMissed": 10,
+                            "yellowCards": 0,
+                          },
+                          "position": "Left Mid",
+                        },
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c12",
+                          "name": "Stephen Strange",
+                          "playerStats": Object {
+                            "ballsLost": 0,
+                            "goals": 0,
+                            "goalsAllowed": 4,
+                            "penalties": 0,
+                            "redCards": 0,
+                            "saves": 7,
+                            "starts": 7,
+                            "tacklesWon": 0,
+                            "tackletsMissed": 0,
+                            "yellowCards": 0,
+                          },
+                          "position": "Goalie",
+                        },
+                      ],
+                      "rank": 1,
+                      "record": "3-1",
+                    },
+                    Object {
+                      "coaches": Array [],
+                      "id": "2b5",
+                      "name": "Thunder",
+                      "players": Array [
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c13",
+                          "name": "Jessica Jones",
+                          "playerStats": Object {
+                            "ballsLost": 6,
+                            "goals": 2,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 4,
+                            "tacklesWon": 9,
+                            "tackletsMissed": 12,
+                            "yellowCards": 2,
+                          },
+                          "position": "Striker",
+                        },
+                        Object {
+                          "currentPlayer": false,
+                          "id": "3c14",
+                          "name": "Luke Cage",
+                          "playerStats": Object {
+                            "ballsLost": 3,
+                            "goals": 0,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 2,
+                            "tacklesWon": 12,
+                            "tackletsMissed": 9,
+                            "yellowCards": 0,
+                          },
+                          "position": "Center Mid",
+                        },
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c15",
+                          "name": "Matt Murdoc",
+                          "playerStats": Object {
+                            "ballsLost": 0,
+                            "goals": 0,
+                            "goalsAllowed": 2,
+                            "penalties": 0,
+                            "redCards": 0,
+                            "saves": 9,
+                            "starts": 8,
+                            "tacklesWon": 0,
+                            "tackletsMissed": 0,
+                            "yellowCards": 0,
+                          },
+                          "position": "Goalie",
+                        },
+                      ],
+                      "rank": 2,
+                      "record": "2-2",
+                    },
+                    Object {
+                      "coaches": Array [],
+                      "id": "2b6",
+                      "name": "Ninjas",
+                      "players": Array [
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c16",
+                          "name": "Hank Pym",
+                          "playerStats": Object {
+                            "ballsLost": 9,
+                            "goals": 1,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 1,
+                            "saves": 0,
+                            "starts": 5,
+                            "tacklesWon": 4,
+                            "tackletsMissed": 17,
+                            "yellowCards": 2,
+                          },
+                          "position": "Striker",
+                        },
+                        Object {
+                          "currentPlayer": false,
+                          "id": "3c17",
+                          "name": "Eddie Brock",
+                          "playerStats": Object {
+                            "ballsLost": 2,
+                            "goals": 1,
+                            "goalsAllowed": 0,
+                            "penalties": 3,
+                            "redCards": 0,
+                            "saves": 0,
+                            "starts": 1,
+                            "tacklesWon": 5,
+                            "tackletsMissed": 10,
+                            "yellowCards": 0,
+                          },
+                          "position": "Right Mid",
+                        },
+                        Object {
+                          "currentPlayer": true,
+                          "id": "3c18",
+                          "name": "Otto Octavius",
+                          "playerStats": Object {
+                            "ballsLost": 0,
+                            "goals": 0,
+                            "goalsAllowed": 7,
+                            "penalties": 0,
+                            "redCards": 0,
+                            "saves": 5,
+                            "starts": 4,
+                            "tacklesWon": 0,
+                            "tackletsMissed": 0,
+                            "yellowCards": 0,
+                          },
+                          "position": "Goalie",
+                        },
+                      ],
+                      "rank": 3,
+                      "record": "1-3",
+                    },
+                  ],
+                },
+              ],
+            }
+          }
+        >
+          <div
+            className="profile__container"
+          >
+            <UserProfileView
+              currentUser={
+                Object {
+                  "email": "juvannameetmymom@gmail.com",
+                  "photoUrl": "https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg",
+                  "role": "admin",
+                  "uid": "DabvcWn4jiSoVonf6sjkeIIEU0p2",
+                  "userId": "ABC123",
+                  "userLeagues": Array [
+                    Object {
+                      "leagueId": "BCD234",
+                      "leagueName": "Leaguer",
+                    },
+                  ],
+                  "userTeams": Array [
+                    Object {
+                      "teamId": "CDE345",
+                      "teamName": "Teamer",
+                    },
+                  ],
+                  "username": "Juvanna",
+                }
+              }
+              onClick={[Function]}
+            >
+              <div
+                className="profile__container"
+              >
+                <div
+                  className="profile"
+                >
+                  <div
+                    className="profile__left"
+                  >
+                    <h1
+                      className="profile__left__title"
+                    />
+                    <div
+                      className="profile__left__image"
+                    >
+                      <img
+                        src="https://res.cloudinary.com/hjmorrow23/image/upload/v1541617700/rostered/profiles/default.jpg"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="profile__right"
+                  >
+                    <div
+                      className="profile__right__links"
+                    >
+                      <a
+                        className="profile__right__links__button"
+                        href=""
+                        onClick={[Function]}
+                      >
+                        <i
+                          className="fa fa-ellipsis-v"
+                        />
+                      </a>
+                      <ul
+                        className="profile__right__links__menu js-profile-options"
+                      >
+                        <li
+                          className="profile__right__links__menu__item"
+                        >
+                          <a
+                            className="profile__right__links__menu__item__link"
+                            href=""
+                            onClick={[Function]}
+                          >
+                            Edit User
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <dl
+                      className="profile__right__list"
+                    >
+                      <div
+                        className="profile__right__list__item"
+                      >
+                        <dt
+                          className="profile__right__list__item__title"
+                        >
+                          First Name
+                        </dt>
+                        <dd
+                          className="profile__right__list__item__data"
+                        />
+                      </div>
+                      <div
+                        className="profile__right__list__item"
+                      >
+                        <dt
+                          className="profile__right__list__item__title"
+                        >
+                          Last Name
+                        </dt>
+                        <dd
+                          className="profile__right__list__item__data"
+                        />
+                      </div>
+                      <div
+                        className="profile__right__list__item"
+                      >
+                        <dt
+                          className="profile__right__list__item__title"
+                        >
+                          Email
+                        </dt>
+                        <dd
+                          className="profile__right__list__item__data"
+                        >
+                          juvannameetmymom@gmail.com
+                        </dd>
+                      </div>
+                      <div
+                        className="profile__right__list__item"
+                      >
+                        <dt
+                          className="profile__right__list__item__title"
+                        >
+                          Role
+                        </dt>
+                        <dd
+                          className="profile__right__list__item__data"
+                        >
+                          admin
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+            </UserProfileView>
+          </div>
+        </UserProfile>
+      </Route>
+    </withRouter(UserProfile)>
+  </Router>
+</MemoryRouter>
+`;
